@@ -19,6 +19,11 @@ const InputWrapper = styled.div`
       left: unset;
       right: 13px;
     }
+    &.contact-us {
+      top: 10px;
+      width: 54px;
+      height: 54px;
+    }
   }
   label {
     color: #fff;
@@ -45,6 +50,9 @@ const InputWrapper = styled.div`
     }
     &.right {
       padding-right: 50px;
+    }
+    &.contact-us {
+      padding: 25px 82px 25px 42px;
     }
   }
   span {

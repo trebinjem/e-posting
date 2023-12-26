@@ -14,6 +14,11 @@ const InputWrapper = styled.button`
   outline: none;
   margin: ${(props) => props.margin || 0};
   transition: 0.5s all;
+  &.landing {
+    padding: 13px 25px;
+    margin: 0;
+    border: 1px solid #7367f0;
+  }
   &:hover {
     background-color: #fff;
     color: #7367f0;
@@ -21,9 +26,13 @@ const InputWrapper = styled.button`
   }
 `;
 
-const PrimaryButton = ({ children, margin }) => {
+const PrimaryButton = ({ children, margin, className }) => {
   return (
-    <InputWrapper className={`w-100`} type="submit" margin={margin}>
+    <InputWrapper
+      className={`w-100 ${className ? className : null}`}
+      type="submit"
+      margin={margin}
+    >
       {children}
     </InputWrapper>
   );

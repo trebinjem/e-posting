@@ -5,3 +5,7 @@ body {
   width: 100%;
   font-family: "Public Sans", sans-serif;
 }
+
+.fit-content {
+  width: fit-content !important;
+}
