@@ -26,6 +26,7 @@ import CountUp from "react-countup";
 import SlideInLeftImage from "../../components/SlidingImage/SlideInLeftImage";
 import ScrollTrigger from "react-scroll-trigger";
 import BounceHead from "../../components/SlidingImage/BounceHeads";
+import SpeakLoud from "../../components/SlidingImage/SpeakLoud";
 
 const LandingPage = () => {
   const [menu, setMenu] = useState(false);
@@ -325,7 +326,8 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="col-md-6 order-1 order-md-2">
-            <img src={fourthImg} alt="fourthImg" className="w-100" />
+            {/* <img src={fourthImg} alt="fourthImg" className="w-100" /> */}
+            <SpeakLoud />
           </div>
         </div>
       </section>

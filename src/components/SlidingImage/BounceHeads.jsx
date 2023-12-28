@@ -8,10 +8,22 @@ const BounceHead = () => {
   const mainControls = useAnimation();
 
   useEffect(() => {
+    const sequence = async () => {
+      await mainControls.start("visible");
+      mainControls.start({
+        rotate: [
+          1, -1.4, 0, 1, -1.4, 0, 1, -1.4, 0, 1, -1.4, 0, 1, -1.4, 0, 1, -1.4,
+          0, 1, -1.4, 0, 1, -1.4, 0,
+        ],
+        transition: { duration: 1, repeat: Infinity },
+      });
+    };
+
     if (isInView) {
-      mainControls.start("visible");
+      sequence();
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
+
   return (
     <div ref={ref}>
       <motion.div className="w-100">
@@ -261,11 +273,18 @@ const BounceHead = () => {
             fill="#F5F5F5"
           />
           <motion.g
+            ref={ref}
             initial="hidden"
             animate={mainControls}
             variants={{
-              hidden: { opacity: 1, scale: 0 },
-              visible: { opacity: 1, scale: 1 },
+              hidden: {
+                opacity: 1,
+                scale: 0,
+              },
+              visible: {
+                opacity: 1,
+                scale: 1,
+              },
             }}
             transition={{ duration: 1, delay: 1 }}
           >
