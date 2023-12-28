@@ -9,9 +9,17 @@ const LandingPageWrapper = styled.div`
     background-repeat: no-repeat;
     background-color: #fff;
     padding-bottom: 40px;
+    height: 100%;
+    @media (max-width: 992px) {
+      background-image: none;
+      background-color: #6f35c2;
+    }
   }
   .second {
     padding: 119px 92px 140px 92px;
+    @media (max-width: 992px) {
+      padding: 50px 30px;
+    }
     .main-heading {
       color: var(--Heading, #1f2d3e);
       text-align: center;
@@ -74,11 +82,18 @@ const LandingPageWrapper = styled.div`
           line-height: 24px; /* 133.333% */
         }
       }
+      @media (max-width: 992px) {
+        margin-bottom: 15px;
+      }
     }
   }
   .third {
     padding: 0 141px;
     margin-bottom: 314px;
+    @media (max-width: 992px) {
+      padding: 0 30px;
+      margin-bottom: 80px;
+    }
     &.ps-0 {
       margin-bottom: 140px;
     }
@@ -100,6 +115,10 @@ const LandingPageWrapper = styled.div`
         ),
         #a8aaae
       );
+
+      @media (max-width: 992px) {
+        margin: 70px 0 20px 0;
+      }
     }
     .main-heading {
       color: var(--Extra-Semi-Dark, #242745);
@@ -113,6 +132,10 @@ const LandingPageWrapper = styled.div`
         font-weight: 700;
         color: #7367f0;
       }
+      @media (max-width: 992px) {
+        font-size: 34px;
+        line-height: 44px;
+      }
     }
     .sub-heading {
       color: var(--Typography-Color-Body-Text, #4b465c);
@@ -121,11 +144,19 @@ const LandingPageWrapper = styled.div`
       font-weight: 600;
       line-height: 24px; /* 133.333% */
       margin-bottom: 64px;
+
+      @media (max-width: 992px) {
+        margin: 0px 0 30px 0;
+      }
     }
   }
   .four-x {
     padding: 0 100px;
     margin-bottom: 140px;
+    @media (max-width: 992px) {
+      padding: 0 30px;
+      margin-bottom: 80px;
+    }
     .cards-wrapper {
       display: flex;
       align-items: start;
@@ -133,6 +164,23 @@ const LandingPageWrapper = styled.div`
       justify-content: center;
       .cards {
         width: calc(100% / 3 - 100px);
+      }
+      @media (max-width: 992px) {
+        gap: 0 25px;
+        .cards {
+          width: calc(100% / 3 - 25px);
+        }
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 25px;
+        .cards {
+          width: calc(100% / 1 - 50px);
+        }
+        .main-heading {
+          font-size: 45px;
+          line-height: normal;
+        }
       }
     }
     .main-heading {
@@ -184,6 +232,12 @@ const LandingPageWrapper = styled.div`
     border-radius: 8px;
     background: var(--Primary-Primary---100, #e3e1fc);
     position: relative;
+    @media (max-width: 992px) {
+      padding: 66px 34px;
+    }
+    @media (max-width: 768px) {
+      padding: 25px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -195,6 +249,9 @@ const LandingPageWrapper = styled.div`
 
       background-repeat: no-repeat;
       background-image: url("src/assets/images/account-left.png");
+      @media (max-width: 576px) {
+        width: 60%;
+      }
     }
     &::after {
       content: "";
@@ -210,6 +267,10 @@ const LandingPageWrapper = styled.div`
       fill: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
       opacity: 0.2;
       mix-blend-mode: color-burn;
+      @media (max-width: 576px) {
+        width: 60%;
+        bottom: 0;
+      }
     }
     .main-heading {
       color: var(--Extra-Semi-Dark, #242745);
@@ -231,6 +292,12 @@ const LandingPageWrapper = styled.div`
   footer {
     padding: 160px 160px 54px 160px;
     background: var(--Primary-Primary---900, #564db4);
+    @media (max-width: 1366px) {
+      padding: 160px 50px 54px 50px;
+    }
+    @media (max-width: 768px) {
+      padding: 120px 30px 54px 30px;
+    }
     .contents {
       color: #fff;
       display: flex;
@@ -242,6 +309,9 @@ const LandingPageWrapper = styled.div`
         font-weight: 600;
         line-height: 30px; /* 136.364% */
         margin-bottom: 12px;
+        @media (max-width: 768px) {
+          margin-top: 30px;
+        }
       }
       p {
         margin: 0;
@@ -258,6 +328,11 @@ const LandingPageWrapper = styled.div`
       padding-top: 42px;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       gap: 32px;
+      @media (max-width: 768px) {
+        gap: 15px;
+        flex-direction: column;
+        justify-content: center;
+      }
       span {
         color: var(--Extra-White, #fff);
         font-size: 18px;
@@ -277,6 +352,37 @@ const Header = styled.header`
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+  @media (max-width: 1200px) {
+    padding: 30px 35px;
+  }
+  @media (max-width: 768px) {
+    .mobile-menu {
+      position: fixed;
+      background: #ebebeb;
+      width: 300px !important;
+      padding: 10px 20px;
+      height: 100%;
+      top: 0;
+      right: -320px;
+      transition: 0.5s all;
+      z-index: 999;
+      &.active {
+        right: 0;
+      }
+      span {
+        color: #141414;
+      }
+      > .d-flex {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 20px;
+      }
+      button {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 const Button = styled.button`
@@ -311,8 +417,14 @@ const Button = styled.button`
 `;
 
 const MainPost = styled.div`
-  margin-left: 132px;
+  padding-left: 132px;
   color: #fff;
+  @media (max-width: 1200px) {
+    padding-left: 52px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
   .max-w-500 {
     max-width: 500px;
   }
@@ -322,6 +434,10 @@ const MainPost = styled.div`
     font-weight: 700;
     line-height: 84px;
     margin: 0 0 32px 0;
+    @media (max-width: 1366px) {
+      font-size: 32px;
+      line-height: 44px;
+    }
   }
   span {
     font-size: 12px;

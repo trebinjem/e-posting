@@ -1,5 +1,5 @@
 // LandingPage.jsx
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Header,
@@ -22,22 +22,66 @@ import landingPageRight from "../../assets/images/landing-page-right.svg";
 import secondImg from "../../assets/images/second-img.svg";
 import fourthImg from "../../assets/images/fourth-img.svg";
 import fifthImg from "../../assets/images/fifth-img.svg";
+import CountUp from "react-countup";
+import SlideInLeftImage from "../../components/SlidingImage/SlideInLeftImage";
+import ScrollTrigger from "react-scroll-trigger";
+import BounceHead from "../../components/SlidingImage/BounceHeads";
 
 const LandingPage = () => {
+  const [menu, setMenu] = useState(false);
+  const [counterOn, setCounterOn] = useState(false);
+
   return (
     <LandingPageWrapper>
       <section className="first">
-        <Header className="d-flex align-items-center">
+        <Header className="d-flex align-items-center position-relative">
           <img src={logo} alt="logo" />
-          <div className="mx-auto">
-            <span className="me-5">Our Products</span>
-            <span className="me-5">Partners</span>
-            <span>Help</span>
+          <div className={`mobile-menu w-100 ${menu ? "active" : ""}`}>
+            <div className="text-end d-block d-md-none">
+              <svg
+                width="25px"
+                height="25px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                onClick={() => setMenu(false)}
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM8.96963 8.96965C9.26252 8.67676 9.73739 8.67676 10.0303 8.96965L12 10.9393L13.9696 8.96967C14.2625 8.67678 14.7374 8.67678 15.0303 8.96967C15.3232 9.26256 15.3232 9.73744 15.0303 10.0303L13.0606 12L15.0303 13.9696C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0303 15.0303C9.73742 15.3232 9.26254 15.3232 8.96965 15.0303C8.67676 14.7374 8.67676 14.2625 8.96965 13.9697L10.9393 12L8.96963 10.0303C8.67673 9.73742 8.67673 9.26254 8.96963 8.96965Z"
+                  fill="#1C274C"
+                />
+              </svg>
+            </div>
+            <div className="d-flex align-items-center w-100">
+              <span className="me-5 ms-0 ms-md-auto">Our Products</span>
+              <span className="me-5">Partners</span>
+              <span className="me-0 me-md-auto">Help</span>
+              <Button className="ms-0 ms-md-auto">Login</Button>
+            </div>
           </div>
-          <Button>Login</Button>
+          <div className="ms-auto d-block d-md-none">
+            <svg
+              width="25px"
+              height="25px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              onClick={() => setMenu(!menu)}
+            >
+              <path
+                d="M4 6H20M4 12H20M4 18H20"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
         </Header>
 
-        <div className="row w-100">
+        <div className="row m-0">
           <div className="col-sm-12 col-md-12 col-lg-6">
             <MainPost>
               <p>Join the world's fastest growing jobs marketplace</p>
@@ -100,7 +144,7 @@ const LandingPage = () => {
           connect with users and receive updates on your requests.
         </div>
         <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-4">
+          <div className="col-sm-12 col-md-12 col-lg-4 mb-3 mb-md-0">
             <div className="card h-100">
               <div className="image-parent">
                 <svg
@@ -123,7 +167,7 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-          <div className="col-sm-12 col-md-12 col-lg-4">
+          <div className="col-sm-12 col-md-12 col-lg-4 mb-3 mb-md-0">
             <div className="card h-100">
               <div className="image-parent">
                 <svg
@@ -185,7 +229,7 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-          <div className="col-sm-12 col-md-12 col-lg-4">
+          <div className="col-sm-12 col-md-12 col-lg-4 mb-3 mb-md-0">
             <div className="card h-100">
               <div className="image-parent">
                 <svg
@@ -230,7 +274,8 @@ const LandingPage = () => {
       <section className="w-100 third">
         <div className="row">
           <div className="col-md-6">
-            <img src={secondImg} alt="secondImg" className="w-100" />
+            {/* <img src={secondImg} alt="secondImg" className="w-100" /> */}
+            <BounceHead />
           </div>
           <div className="col-md-6">
             <p className="tag-third fit-content">
@@ -257,7 +302,7 @@ const LandingPage = () => {
       </section>
       <section className="w-100 third">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 order-2 order-md-1">
             <p className="tag-third fit-content">
               Automation technology helps you screen jobs and networking
               requests!
@@ -279,7 +324,7 @@ const LandingPage = () => {
               <Button className="landing">Learn more</Button>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 order-1 order-md-2">
             <img src={fourthImg} alt="fourthImg" className="w-100" />
           </div>
         </div>
@@ -287,31 +332,54 @@ const LandingPage = () => {
       <section className="w-100 four-x">
         <div className="cards-wrapper">
           <div className="cards">
-            <p className="main-heading">4x</p>
+            <p className="main-heading">
+              {counterOn && (
+                <>
+                  <CountUp duration={3} end={4} className="counter" />x
+                </>
+              )}
+            </p>
             <p className="sub-heading">
               4 times more likely to land a job than website applicants
             </p>
           </div>
           <div className="cards">
             {/* <div className="border-y"> */}
-            <p className="main-heading">250+</p>
+            <p className="main-heading">
+              <ScrollTrigger
+                onEnter={() => setCounterOn(true)}
+                onExit={() => setCounterOn(true)}
+              >
+                {counterOn && (
+                  <>
+                    <CountUp duration={3} end={250} className="counter" />+
+                  </>
+                )}
+              </ScrollTrigger>
+            </p>
             <p className="sub-heading">
               The average corporate job opening receives 250+ applications.
             </p>
             {/* </div> */}
           </div>
           <div className="cards">
-            <p className="main-heading">80%</p>
+            <p className="main-heading">
+              {counterOn && (
+                <>
+                  <CountUp duration={3} end={80} className="counter" />%
+                </>
+              )}
+            </p>
             <p className="sub-heading">
               of jobs are filled through networking and personal relationships
             </p>
           </div>
         </div>
       </section>
-      <section className="w-100 third ps-0">
+      <section className="w-100 third ps-md-0">
         <div className="row">
           <div className="col-md-6">
-            <img src={fifthImg} alt="fifthImg" className="w-100" />
+            <SlideInLeftImage imgSrc={fifthImg} alt="fifthImg" />
           </div>
           <div className="col-md-6">
             <p className="tag-third fit-content">ePosting is device friendly</p>
@@ -346,14 +414,14 @@ const LandingPage = () => {
       </section>
       <footer>
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-sm-12 col-md-3">
             <div className="contents">
               <p className="heading">Our Marketplaces</p>
               <p>Jobs Marketplace</p>
               <p>Resources Marketplace</p>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-sm-12 col-md-3">
             <div className="contents">
               <p className="heading">Partners</p>
               <p>Jobs workflow</p>
@@ -361,7 +429,7 @@ const LandingPage = () => {
               <p>How to</p>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-sm-12 col-md-3">
             <div className="contents">
               <p className="heading">Company</p>
               <p>Our story</p>
@@ -370,7 +438,7 @@ const LandingPage = () => {
               <p>Partner with us</p>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-sm-12 col-md-3">
             <div className="contents">
               <p className="heading">Get It Touch</p>
               <Input
@@ -386,8 +454,8 @@ const LandingPage = () => {
         </div>
         <div className="copy-right d-flex align-items-center">
           <img src={logo} alt="logo" />
-          <span className="ms-auto"> Privacy Policy</span>
-          <span className="me-auto"> Terms of Use</span>
+          <span className="ms-0 ms-md-auto"> Privacy Policy</span>
+          <span className="ms-0 ms-md-auto"> Terms of Use</span>
           <span>© 2023 ePosting Corp. all rights reserved</span>
         </div>
       </footer>
