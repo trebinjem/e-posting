@@ -170,6 +170,11 @@ const LandingPageWrapper = styled.div`
       font-weight: 700;
       line-height: 78px; /* 139.286% */
       margin-bottom: 28px;
+      @media (max-width: 768px) {
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 0;
+      }
     }
     .sub-heading {
       color: var(--Extra-Dark, #4b4b4b);
@@ -179,6 +184,11 @@ const LandingPageWrapper = styled.div`
       font-weight: 600;
       line-height: 44px; /* 137.5% */
       margin-bottom: 28px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 25px;
+      }
     }
     button.landing {
       border-color: #7367f0;
@@ -199,6 +209,9 @@ const LandingPageWrapper = styled.div`
         #4b465c
       );
       padding: 32px;
+      @media (max-width: 768px) {
+        padding: 15px;
+      }
     }
   }
   .four-x {
@@ -288,6 +301,7 @@ const LandingPageWrapper = styled.div`
     }
     @media (max-width: 768px) {
       padding: 25px;
+      width: calc(100% - 50px);
     }
     &::before {
       content: "";

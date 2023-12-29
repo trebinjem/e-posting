@@ -63,3 +63,26 @@ section .accordion-item .accordion-button::after {
 .cursor-pointer {
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  section .accordion-item .accordion-header button {
+    padding: 15px;
+  }
+  section .accordion-item .accordion-header button {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  section .accordion-item .accordion-header button span {
+    margin-right: 20px;
+    font-size: 18px;
+  }
+  section .accordion-item .accordion-body {
+    padding-left: 48px;
+    font-size: 14px;
+    line-height: normal;
+  }
+  section .accordion-item .accordion-button::after {
+    width: 24px;
+    height: 24px;
+  }
+}
