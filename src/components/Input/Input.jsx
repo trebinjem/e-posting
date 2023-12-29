@@ -3,6 +3,34 @@ import styled from "styled-components";
 const InputWrapper = styled.div`
   margin-bottom: 24px;
   gap: 12px;
+  &.contact-us {
+    gap: 4px;
+    label {
+      color: var(--Extra-Dark, #4b4b4b);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    input,
+    textarea {
+      padding: 7px 14px;
+      color: var(--Typography-Color-Muted-Text, #4b465c);
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 160% */
+      border-radius: 4px;
+      border: 1px solid var(--Extra-Divider, #dbdade);
+      background: var(--Extra-Card-Background, #fff);
+    }
+  }
+
+  &.min-w-150 {
+    input {
+      width: 150px !important;
+    }
+  }
   .input-parent {
     max-width: 100%;
   }
@@ -31,8 +59,13 @@ const InputWrapper = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    span {
+      color: red;
+      font-size: 15px;
+    }
   }
-  input {
+  input,
+  textarea {
     padding: 13px 16px;
     font-size: 15px;
     font-style: normal;
@@ -74,23 +107,36 @@ const Input = ({
   imagePosition,
   eg,
   className,
+  requiredStar,
 }) => {
   return (
     <InputWrapper
       className={`d-flex flex-column ${className ? className : ""}`}
     >
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name}>
+        {label} {requiredStar && <span>*</span>}
+      </label>
       <div className="position-relative w-100 input-parent">
         {image && (
           <img src={image} alt="input-icon" className={imagePosition} />
         )}
-        <input
-          type={type}
-          name={name}
-          id={name}
-          placeholder={placeholder}
-          className={`w-100 ${imagePosition}`}
-        />
+        {type !== "textarea" ? (
+          <input
+            type={type}
+            name={name}
+            id={name}
+            placeholder={placeholder}
+            className={`w-100 ${imagePosition}`}
+          />
+        ) : (
+          <textarea
+            name={name}
+            id={name}
+            rows={4}
+            placeholder={placeholder}
+            className={`w-100 ${imagePosition}`}
+          ></textarea>
+        )}
       </div>
       {eg && <span>{eg}</span>}
     </InputWrapper>

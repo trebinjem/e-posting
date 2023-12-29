@@ -456,8 +456,8 @@ const LandingPage = () => {
         </div>
         <div className="copy-right d-flex align-items-center">
           <img src={logo} alt="logo" />
-          <span className="ms-0 ms-md-auto"> Privacy Policy</span>
-          <span className="ms-0 ms-md-auto"> Terms of Use</span>
+          <span className="ms-0 ms-md-auto">Privacy Policy</span>
+          <span className="ms-0 ms-md-auto">Terms of Use</span>
           <span>© 2023 ePosting Corp. all rights reserved</span>
         </div>
       </footer>

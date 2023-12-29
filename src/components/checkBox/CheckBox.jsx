@@ -3,6 +3,15 @@ import styled from "styled-components";
 const InputWrapper = styled.div`
   margin-bottom: 18px;
   gap: 12px;
+  &.contact-us {
+    label {
+      color: var(--Gray-Gray---900, #4b465c);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
   .input-parent {
     max-width: 100%;
   }
@@ -42,9 +51,11 @@ const InputWrapper = styled.div`
   }
 `;
 
-const CheckBox = ({ type, name, label, value, eg }) => {
+const CheckBox = ({ type, name, label, value, eg, className }) => {
   return (
-    <InputWrapper className="d-flex flex-column">
+    <InputWrapper
+      className={`d-flex flex-column ${className ? className : null}`}
+    >
       <div>
         <input type={type} name={name} id={name} value={value} />
         <label htmlFor={name}>{label}</label>

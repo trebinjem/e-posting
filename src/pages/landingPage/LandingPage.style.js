@@ -10,9 +10,13 @@ const LandingPageWrapper = styled.div`
     background-color: #fff;
     padding-bottom: 40px;
     height: 100%;
+    &.contact-us-page {
+      background-image: none;
+      padding-bottom: 0px;
+    }
     @media (max-width: 992px) {
       background-image: none;
-      background-color: #6f35c2;
+      background-color: #7367f0;
     }
   }
   .second {
@@ -148,6 +152,53 @@ const LandingPageWrapper = styled.div`
       @media (max-width: 992px) {
         margin: 0px 0 30px 0;
       }
+    }
+  }
+  .contact-us-section {
+    padding: 120px 100px 181px 100px;
+    @media (max-width: 1366px) {
+      padding: 120px 35px 181px 35px;
+    }
+    @media (max-width: 768px) {
+      padding: 40px 30px;
+    }
+    .main-heading {
+      color: var(--Extra-Dark, #4b4b4b);
+      font-family: Public Sans;
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 78px; /* 139.286% */
+      margin-bottom: 28px;
+    }
+    .sub-heading {
+      color: var(--Extra-Dark, #4b4b4b);
+      font-family: Public Sans;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 44px; /* 137.5% */
+      margin-bottom: 28px;
+    }
+    button.landing {
+      border-color: #7367f0;
+      color: #7367f0;
+      &:hover {
+        color: #fff;
+      }
+    }
+    .form-custom {
+      border-radius: 8px;
+      background: var(
+        --Gray-Gray---100,
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(255, 255, 255, 0.95) 100%
+        ),
+        #4b465c
+      );
+      padding: 32px;
     }
   }
   .four-x {
@@ -352,8 +403,16 @@ const Header = styled.header`
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+  &.contact-us-page {
+    background-color: #7367f0;
+    padding: 23px 92px;
+  }
   @media (max-width: 1200px) {
     padding: 30px 35px;
+    &.contact-us-page {
+      background-color: #7367f0;
+      padding: 23px 35px;
+    }
   }
   @media (max-width: 768px) {
     .mobile-menu {
@@ -406,6 +465,16 @@ const Button = styled.button`
     &:hover {
       background-color: #685dd8;
       color: #fff;
+    }
+  }
+  &.fill {
+    border-radius: 100px;
+    background: var(--primary-primary-500-base, #7367f0);
+    color: #fff;
+    border-color: #7367f0;
+    &:hover {
+      background-color: transparent;
+      color: #7367f0;
     }
   }
   &:hover {
