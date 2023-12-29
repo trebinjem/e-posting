@@ -114,6 +114,7 @@ const LandingPage = () => {
                   name="password"
                   label="Password"
                   imagePosition="right"
+                  placeholder="Password"
                   image={eye}
                   className="mb-3"
                 />
@@ -127,7 +128,11 @@ const LandingPage = () => {
                   name="terms_conditions"
                   value="Terms&Conditions"
                   label="I have read and accepted the Terms of Use and Privacy Policy."
-                />
+                >
+                  I have read and accepted the{" "}
+                  <span className="white">Terms of Use</span> and{" "}
+                  <span className="white">Privacy Policy.</span>
+                </CheckBox>
                 <PrimaryButton margin="0 0 24px 0">Sign Up</PrimaryButton>
                 <Or>or</Or>
                 <div className="d-flex align-items-center gap-3">
@@ -463,7 +468,7 @@ const LandingPage = () => {
                 image={send}
                 imagePosition="right contact-us"
               />
-              <img src={linkedIn} alt="linkedIn" width={28} />
+              <img src={linkedIn} alt="linkedIn" width={54} />
             </div>
           </div>
         </div>

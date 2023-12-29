@@ -29,6 +29,7 @@ import BounceHead from "../../components/SlidingImage/BounceHeads";
 import SpeakLoud from "../../components/SlidingImage/SpeakLoud";
 import { Accordion } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { MenuItem, Select } from "@mui/material";
 
 const ContactUs = () => {
   const [menu, setMenu] = useState(false);
@@ -73,7 +74,7 @@ const ContactUs = () => {
               >
                 Help
               </span>
-              <Button className="ms-0 ms-md-auto">Login</Button>
+              <Button className="ms-0 ms-md-auto white">Login</Button>
             </div>
           </div>
           <div className="ms-auto d-block d-md-none">
@@ -99,7 +100,7 @@ const ContactUs = () => {
       <section className="contact-us-section">
         <p className="main-heading">We are here to help.</p>
         <p className="sub-heading">Get the info you're looking for right now</p>
-        <Button>View all help topics</Button>
+        <Button className="blue">View all help topics</Button>
         <div className="row mt-5">
           <div className="col-sm-12 col-md-12 col-lg-6">
             <Accordion defaultActiveKey="0">
@@ -226,17 +227,24 @@ const ContactUs = () => {
               </div>
               <div className="row">
                 <div className="col-sm-12 col-md-12">
-                  <Input
-                    type="email"
-                    name="email"
-                    label="Reason for contacting us"
-                    placeholder="Reason for contacting us"
-                    className="contact-us"
-                    requiredStar={true}
-                  />
+                  <label>
+                    Reason for contacting us <span>*</span>
+                  </label>
+                  <Select className="contact-us-select">
+                    <MenuItem disabled value="">
+                      <em>Reason for contacting us</em>
+                    </MenuItem>
+                    <MenuItem value={20}>Accounts</MenuItem>
+                    <MenuItem value={21}>Technical support</MenuItem>
+                    <MenuItem value={22}>Payments</MenuItem>
+                    <MenuItem value={33}>
+                      Request a feature / provide feedback
+                    </MenuItem>
+                    <MenuItem value={34}>Others</MenuItem>
+                  </Select>
                 </div>
               </div>
-              <div className="row">
+              <div className="row mt-3">
                 <div className="col-sm-12 col-md-12">
                   <Input
                     type="textarea"
@@ -268,7 +276,11 @@ const ContactUs = () => {
                     value="Terms&Conditions"
                     className="contact-us"
                     label="I have read and accepted the Terms of Use and Privacy Policy."
-                  />
+                  >
+                    I have read and accepted the{" "}
+                    <span className="highlight">Terms of Use</span> and
+                    <span className="highlight"> Privacy Policy.</span>
+                  </CheckBox>
                 </div>
               </div>
               <div className="text-end">
@@ -325,7 +337,7 @@ const ContactUs = () => {
                 image={send}
                 imagePosition="right contact-us"
               />
-              <img src={linkedIn} alt="linkedIn" width={28} />
+              <img src={linkedIn} alt="linkedIn" width={54} />
             </div>
           </div>
         </div>

@@ -48,17 +48,28 @@ const InputWrapper = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    &.highlight {
+      color: #7367f0;
+      cursor: pointer;
+      display: inline;
+    }
+    &.white {
+      text-decoration: underline;
+      color: #fff;
+      cursor: pointer;
+      display: inline;
+    }
   }
 `;
 
-const CheckBox = ({ type, name, label, value, eg, className }) => {
+const CheckBox = ({ type, name, value, eg, className, children }) => {
   return (
     <InputWrapper
       className={`d-flex flex-column ${className ? className : null}`}
     >
-      <div>
+      <div className="d-flex align-items-center">
         <input type={type} name={name} id={name} value={value} />
-        <label htmlFor={name}>{label}</label>
+        <label htmlFor={name}>{children}</label>
       </div>
       {eg && <span>{eg}</span>}
     </InputWrapper>

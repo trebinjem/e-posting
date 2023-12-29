@@ -394,7 +394,7 @@ const LandingPageWrapper = styled.div`
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       gap: 32px;
       @media (max-width: 768px) {
-        gap: 15px;
+        gap: 10px;
         flex-direction: column;
         justify-content: center;
       }
@@ -404,6 +404,9 @@ const LandingPageWrapper = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: 28px; /* 155.556% */
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -484,6 +487,23 @@ const Button = styled.button`
       color: #fff;
     }
   }
+  &.blue {
+    padding: 10px 25px;
+    border: 1px solid var(--primary-primary-500-base, #7367f0);
+    color: #7367f0;
+    &:hover {
+      background-color: #7367f0;
+      color: #fff;
+    }
+  }
+  &.white {
+    border: 1px solid var(--primary-primary-500-base, #fff);
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: #7367f0;
+    }
+  }
   &.fill {
     border-radius: 100px;
     background: var(--primary-primary-500-base, #7367f0);
@@ -507,6 +527,14 @@ const MainPost = styled.div`
   color: #fff;
   @media (max-width: 1200px) {
     padding-left: 52px;
+  }
+  @media (max-width: 992px) {
+    .max-w-500 {
+      margin: auto;
+    }
+    p {
+      text-align: center;
+    }
   }
   @media (max-width: 768px) {
     padding: 0 30px;
@@ -579,6 +607,9 @@ const SocialButton = styled.button`
   img {
     margin-right: 10px;
     vertical-align: middle;
+  }
+  @media (max-width: 768px) {
+    padding: 15px;
   }
 `;
 
