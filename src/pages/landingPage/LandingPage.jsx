@@ -17,7 +17,7 @@ import mail from "../../assets/images/mail.svg";
 import send from "../../assets/images/send.svg";
 import eye from "../../assets/images/eye.svg";
 import google from "../../assets/images/google.svg";
-import linkedIn from "../../assets/images/linkedin.svg";
+import linkedIn from "../../assets/images/linkedinLanding.svg";
 import landingPageRight from "../../assets/images/landing-page-right.svg";
 import secondImg from "../../assets/images/second-img.svg";
 import fourthImg from "../../assets/images/fourth-img.svg";
