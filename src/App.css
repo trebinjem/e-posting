@@ -60,3 +60,6 @@ section .accordion-item .accordion-button::after {
   background-size: 100%;
   background-image: url("../src/assets/images/plus-acc.svg");
 }
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -403,6 +403,9 @@ const Header = styled.header`
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+  span {
+    cursor: pointer;
+  }
   &.contact-us-page {
     background-color: #7367f0;
     padding: 23px 92px;

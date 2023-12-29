@@ -28,16 +28,24 @@ import ScrollTrigger from "react-scroll-trigger";
 import BounceHead from "../../components/SlidingImage/BounceHeads";
 import SpeakLoud from "../../components/SlidingImage/SpeakLoud";
 import { Accordion } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
   const [menu, setMenu] = useState(false);
   const [counterOn, setCounterOn] = useState(false);
 
+  const navigate = useNavigate();
+
   return (
     <LandingPageWrapper>
       <section className="first contact-us-page">
         <Header className="d-flex align-items-center position-relative contact-us-page">
-          <img src={logo} alt="logo" />
+          <img
+            src={logo}
+            alt="logo"
+            onClick={() => navigate("/")}
+            className="cursor-pointer"
+          />
           <div className={`mobile-menu w-100 ${menu ? "active" : ""}`}>
             <div className="text-end d-block d-md-none">
               <svg
@@ -59,7 +67,12 @@ const ContactUs = () => {
             <div className="d-flex align-items-center w-100">
               <span className="me-5 ms-0 ms-md-auto">Our Products</span>
               <span className="me-5">Partners</span>
-              <span className="me-0 me-md-auto">Help</span>
+              <span
+                className="me-0 me-md-auto"
+                onClick={() => navigate("/contact-us")}
+              >
+                Help
+              </span>
               <Button className="ms-0 ms-md-auto">Login</Button>
             </div>
           </div>
