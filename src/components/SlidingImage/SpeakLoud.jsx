@@ -110,8 +110,8 @@ const SpeakLoud = () => {
     <div ref={ref1}>
       <motion.div className="w-100">
         <svg
-          width="553"
-          height="553"
+          width="100%"
+          height="100%"
           viewBox="0 0 887 553"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

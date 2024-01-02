@@ -5,7 +5,7 @@ import pfp from "../../assets/images/pfp.svg";
 
 function RotatingIcons() {
   return (
-    <div className="rotating-icons ">
+    <div className="rotating-icons">
       <img src={background} className="back-layer" alt="landing page right" />
       <img src={pfp} alt="profile picture" className="orbit-1 imoge-1" />
       <img src={shield} alt="shield icon" className="orbit-2 imoge-2" />
