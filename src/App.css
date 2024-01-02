@@ -1,0 +1,197 @@
+@import "bootstrap/dist/css/bootstrap.css";
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: "Public Sans", sans-serif;
+}
+
+.fit-content {
+  width: fit-content !important;
+}
+
+section .accordion-item .accordion-header button {
+  background: var(--Primary-Primary---100, #e3e1fc);
+  padding: 32px;
+  outline: none;
+  color: var(--Extra-Black, #171725);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+}
+section .accordion-item .accordion-header button:hover {
+  color: var(--Extra-Black, #171725);
+}
+section .accordion-item .accordion-header button:focus {
+  outline: 0 !important;
+  box-shadow: none;
+}
+section .accordion-item .accordion-header button span {
+  color: var(--Typography-Color-Muted-Text, #4b465c);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 46px; /* 143.75% */
+  margin-right: 47px;
+}
+section .accordion-item .accordion-body {
+  background-color: #e3e1fc;
+  color: #5a5365;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+  padding-left: 90px;
+  padding-top: 0;
+}
+section .accordion-item .accordion-header button.collapsed {
+  background-color: rgba(115, 103, 240, 0.08);
+}
+section .accordion-item {
+  border: none;
+}
+section .accordion-item .accordion-header {
+  border: none;
+  outline: none;
+}
+section .accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: url("../src/assets/images/close-acc.svg");
+}
+section .accordion-item .accordion-button::after {
+  width: 45px;
+  height: 45px;
+  background-size: 100%;
+  background-image: url("../src/assets/images/plus-acc.svg");
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.contact-us-select {
+  width: 100%;
+  background: var(--Extra-Card-Background, #fff);
+  /* padding: 7px 15px; */
+  color: var(--Typography-Color-Muted-Text, #4b465c);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  min-height: 40px;
+  border-radius: 4px;
+}
+.contact-us-select .MuiSelect-select {
+  padding: 7px 15px;
+  border: 1px solid var(--Extra-Divider, #dbdade);
+  font-family: Public Sans;
+  color: var(--Typography-Color-Muted-Text, #4b465c);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contact-us-select.MuiInputBase-root:hover {
+  border: 0;
+}
+label {
+  color: var(--Extra-Dark, #4b4b4b);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+label span {
+  color: red;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  section .accordion-item .accordion-header button {
+    padding: 15px;
+  }
+  section .accordion-item .accordion-header button {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  section .accordion-item .accordion-header button span {
+    margin-right: 20px;
+    font-size: 18px;
+  }
+  section .accordion-item .accordion-body {
+    padding-left: 48px;
+    font-size: 14px;
+    line-height: normal;
+  }
+  section .accordion-item .accordion-button::after {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.rotating-icons {
+  position: relative;
+  margin: 40px;
+}
+.back-layer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.orbit-1 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  offset-path: circle(42% at 50% 50%);
+}
+
+.imoge-1 {
+  offset-distance: 0%;
+  offset-rotate: 0deg;
+  animation: orbit-a 60s linear infinite;
+}
+
+@keyframes orbit-a {
+  100% {
+    offset-distance: 100%;
+    offset-rotate: 0deg;
+  }
+}
+.orbit-2 {
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  offset-path: circle(42% at 50% 50%);
+}
+
+.imoge-2 {
+  offset-distance: -33%;
+  offset-rotate: 0deg;
+  animation: orbit-b 60s linear infinite;
+}
+
+@keyframes orbit-b {
+  100% {
+    offset-distance: 67%;
+    offset-rotate: 0deg;
+  }
+}
+.orbit-3 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  offset-path: circle(42% at 50% 50%);
+}
+
+.imoge-3 {
+  offset-distance: -66%;
+  offset-rotate: 0deg;
+  animation: orbit-c 60s linear infinite;
+}
+
+@keyframes orbit-c {
+  100% {
+    offset-distance: 34%;
+    offset-rotate: 0deg;
+  }
+}
