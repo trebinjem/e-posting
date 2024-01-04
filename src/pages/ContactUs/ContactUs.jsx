@@ -100,7 +100,7 @@ const ContactUs = () => {
       <section className="contact-us-section">
         <p className="main-heading">We are here to help.</p>
         <p className="sub-heading">Get the info you're looking for right now</p>
-        <Button className="blue">View all help topics</Button>
+        <Button className="blue max-w-100">View all help topics</Button>
         <div className="row mt-5">
           <div className="col-sm-12 col-md-12 col-lg-6">
             <Accordion defaultActiveKey="0">
@@ -284,7 +284,7 @@ const ContactUs = () => {
                 </div>
               </div>
               <div className="text-end">
-                <Button className="fill">Contact us now</Button>
+                <Button className="fill max-w-100">Contact us now</Button>
               </div>
             </div>
           </div>
@@ -299,7 +299,9 @@ const ContactUs = () => {
           An ecosystem of technologies, resources and partners that empowers
           each one of our users to be successful
         </p>
-        <PrimaryButton className="fit-content">Create an account</PrimaryButton>
+        <PrimaryButton className="fit-content max-w-100">
+          Create an account
+        </PrimaryButton>
       </section>
       <footer>
         <div className="row">

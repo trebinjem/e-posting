@@ -26,7 +26,7 @@ const BounceHead = () => {
 
   return (
     <div ref={ref}>
-      <motion.div className="w-100">
+      <motion.div className="w-90">
         <svg
           width="100%"
           height="100%"

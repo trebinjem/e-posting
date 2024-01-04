@@ -108,7 +108,7 @@ const SpeakLoud = () => {
 
   return (
     <div ref={ref1}>
-      <motion.div className="w-100">
+      <motion.div className="w-90 ms-auto">
         <svg
           width="100%"
           height="100%"

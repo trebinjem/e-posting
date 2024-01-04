@@ -24,6 +24,13 @@ const InputWrapper = styled.button`
     color: #7367f0;
     transition: 0.5s all;
   }
+
+  @media (max-width: 576px) {
+    &.landing,
+    .max-w-100 {
+      width: 100% !important;
+    }
+  }
 `;
 
 const PrimaryButton = ({ children, margin, className }) => {

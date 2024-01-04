@@ -104,8 +104,18 @@ label span {
   color: red;
   font-size: 15px;
 }
+.w-90 {
+  width: 90%;
+}
 
 @media (max-width: 768px) {
+  .w-90 {
+    width: 100%;
+  }
+
+  .max-w-100 {
+    width: 100% !important;
+  }
   section .accordion-item .accordion-header button {
     padding: 15px;
   }
@@ -129,8 +139,10 @@ label span {
 }
 
 .rotating-icons {
+  width: 100%;
   position: relative;
-  margin: 40px;
+  overflow: hidden;
+  /* margin: 40px; */
 }
 .back-layer {
   width: 100%;

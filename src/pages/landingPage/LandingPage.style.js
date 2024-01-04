@@ -16,13 +16,20 @@ const LandingPageWrapper = styled.div`
     }
     @media (max-width: 992px) {
       background-image: none;
-      background-color: #7367f0;
+      background-color: #564db4;
     }
   }
   .second {
     padding: 119px 92px 140px 92px;
     @media (max-width: 992px) {
       padding: 50px 30px;
+    }
+    @media (max-width: 576px) {
+      .main-heading {
+        text-align: left !important;
+        font-size: 24px !important;
+        line-height: normal !important;
+      }
     }
     .main-heading {
       color: var(--Heading, #1f2d3e);
@@ -93,7 +100,7 @@ const LandingPageWrapper = styled.div`
   }
   .third {
     padding: 0 141px;
-    margin-bottom: 314px;
+    margin-bottom: 100px;
     @media (max-width: 992px) {
       padding: 0 30px;
       margin-bottom: 80px;
@@ -155,7 +162,7 @@ const LandingPageWrapper = styled.div`
     }
   }
   .contact-us-section {
-    padding: 120px 100px 181px 100px;
+    padding: 50px 100px 181px 100px;
     @media (max-width: 1366px) {
       padding: 120px 35px 181px 35px;
     }
