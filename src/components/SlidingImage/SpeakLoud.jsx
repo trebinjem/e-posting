@@ -1,73 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-
-const TypingText = ({ text, text2 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  const textControls = useAnimation();
-
-  useEffect(() => {
-    const animateText = () => {
-      textControls.start({
-        opacity: 1,
-        transition: { duration: 0.3 },
-      });
-    };
-
-    if (isInView) {
-      animateText();
-    }
-  }, [isInView, textControls]);
-
-  return (
-    <>
-      <motion.text
-        ref={ref}
-        transform="matrix(1 0 0 1 254 206.561)"
-        initial={{ opacity: 0 }}
-        animate={textControls}
-      >
-        {text.split("").map((char, index) => (
-          <motion.tspan
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: index * 0.3 }}
-            fontFamily="Public Sans"
-            fontSize="24px"
-            fontWeight={"700"}
-            style={{ display: "inline-block" }}
-          >
-            {char}
-          </motion.tspan>
-        ))}
-      </motion.text>
-      <motion.text
-        ref={ref}
-        transform="matrix(1 0 0 1 254 235.561)"
-        initial={{ opacity: 0 }}
-        animate={textControls}
-      >
-        {text2.split("").map((char, index, array) => (
-          <motion.tspan
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: index * 0.3 }}
-            fontFamily="Public Sans"
-            fontSize="24px"
-            fontWeight={"700"}
-            style={{ display: "inline-block" }}
-            fill={index === array.length - 1 ? "#7367F0" : null}
-          >
-            {char}
-          </motion.tspan>
-        ))}
-      </motion.text>
-    </>
-  );
-};
 
 const SpeakLoud = () => {
   const ref1 = useRef(null);
@@ -89,13 +21,15 @@ const SpeakLoud = () => {
     };
 
     const sequence2 = async () => {
+      console.log("yes");
       await mainControls2.start("visible");
       mainControls2.start({
-        // Your animation properties for the text animation
         y: [0, 20, 0],
         transition: { duration: 1, repeat: Infinity },
       });
     };
+
+    console.log(isInView1);
 
     if (isInView1) {
       sequence1();
@@ -586,16 +520,7 @@ const SpeakLoud = () => {
               d="M384.5 342.9C384.5 342.9 384.5 342.7 384.5 342.4C384.5 342.1 384.5 341.6 384.5 341.1C384.5 339.9 384.5 338.2 384.4 336C384.4 331.5 384.3 325 384.3 316.8L384.5 317C361.3 317 324.1 317.1 282.1 317.1C282.2 316.9 281.8 317.4 282.4 316.8V316.9V317V317.2V317.6V318.4V320.1C282.4 321.2 282.4 322.3 282.4 323.4C282.4 325.6 282.4 327.8 282.4 330C282.4 334.4 282.4 338.7 282.4 342.9L282.1 342.6C311.3 342.7 336.8 342.7 355.2 342.8C364.3 342.8 371.7 342.9 376.7 342.9C379.2 342.9 381.2 342.9 382.5 342.9C383.1 342.9 383.6 342.9 384 342.9C383.6 342.9 383.2 342.9 382.5 342.9C381.2 342.9 379.2 342.9 376.8 342.9C371.8 342.9 364.4 343 355.3 343C336.9 343 311.3 343.1 282 343.2H281.7V342.9C281.7 338.7 281.7 334.4 281.7 330C281.7 327.8 281.7 325.6 281.7 323.4C281.7 322.3 281.7 321.2 281.7 320.1V318.4V317.6V317.2V317V316.9V316.8C282.4 316.1 281.9 316.6 282.1 316.5C324.1 316.6 361.4 316.6 384.5 316.6H384.7V316.8C384.6 325.1 384.6 331.6 384.6 336.2C384.6 338.4 384.6 340.1 384.5 341.3C384.5 341.8 384.5 342.3 384.5 342.6C384.5 342.7 384.5 342.9 384.5 342.9Z"
               fill="#242745"
             />
-            <motion.g
-              ref={ref1}
-              initial="hidden"
-              animate={mainControls1}
-              variants={{
-                hidden: { opacity: 1, scale: 0 },
-                visible: { opacity: 1, scale: 1 },
-              }}
-              transition={{ duration: 1, delay: 1 }}
-            >
+            <motion.g>
               <path
                 d="M326.7 120.7L325.4 93C325.3 90.7 323.5 88.9 321.2 88.7C318.8 88.5 316.7 90.2 316.4 92.6L312.9 120.4C312.6 122.5 314.3 124.4 316.4 124.4H323.2C325.2 124.3 326.8 122.7 326.7 120.7Z"
                 fill="#A8AAAE"

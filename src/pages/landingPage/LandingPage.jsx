@@ -46,6 +46,7 @@ function isInViewport(el) {
 const LandingPage = () => {
   const [menu, setMenu] = useState(false);
   const [counterOn, setCounterOn] = useState(false);
+  const [coounterOn, setCoounterOn] = useState(false);
 
   const navigate = useNavigate();
 
@@ -422,6 +423,16 @@ const LandingPage = () => {
           <div className="col-md-6 order-1 order-md-2">
             {/* <img src={fourthImg} alt="fourthImg" className="w-100" /> */}
             <SpeakLoud />
+            <ScrollTrigger
+              onEnter={() => setCoounterOn(true)}
+              onExit={() => setCoounterOn(true)}
+            >
+              {counterOn && (
+                <>
+                  <CountUp duration={3} end={250} className="counterr" />
+                </>
+              )}
+            </ScrollTrigger>
           </div>
         </div>
       </section>

@@ -18,10 +18,10 @@ const SlideInLeftImage = ({ imgSrc, alt }) => {
         initial="hidden"
         animate={mainControls}
         variants={{
-          hidden: { opacity: 1, x: -100 },
+          hidden: { opacity: 1, x: -1000 },
           visible: { opacity: 1, x: 0 },
         }}
-        transition={{ duration: 1, delay: 0.25 }}
+        transition={{ duration: 2, delay: 0.25 }}
         className="w-100"
       >
         <motion.img
