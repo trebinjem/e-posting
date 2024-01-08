@@ -173,7 +173,7 @@ const LandingPage = () => {
                 </CheckBox>
                 <PrimaryButton margin="0 0 24px 0">Sign Up</PrimaryButton>
                 <Or>or</Or>
-                <div className="d-flex align-items-center gap-3">
+                <div className="d-flex align-items-center gap-3 button-parent flex-column flex-md-row mb-3 mb-md-0">
                   <SocialButton>
                     <img src={google} alt="social-icon" />
                     Sign up with Google
