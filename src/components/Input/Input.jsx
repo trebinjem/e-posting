@@ -88,6 +88,11 @@ const InputWrapper = styled.div`
       padding: 25px 82px 25px 42px;
     }
   }
+  @media (max-width: 768px) {
+    input {
+      border-radius: 100px;
+    }
+  }
   span {
     color: #fff;
     font-size: 12px;

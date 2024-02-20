@@ -1,5 +1,6 @@
 // LandingPage.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import anime from "animejs/lib/anime.es.js";
 import {
   Button,
   Header,
@@ -7,7 +8,7 @@ import {
   MainPost,
   Or,
   SocialButton,
-} from "./../landingPage/LandingPage.style";
+} from "./Personas.style";
 import Input from "../../components/Input/Input";
 import CheckBox from "../../components/checkBox/Checkbox";
 import PrimaryButton from "../../components/Button/PrimaryButton";
@@ -17,31 +18,69 @@ import mail from "../../assets/images/mail.svg";
 import send from "../../assets/images/send.svg";
 import eye from "../../assets/images/eye.svg";
 import google from "../../assets/images/google.svg";
-import linkedIn from "../../assets/images/linkedin.svg";
+import linkedIn from "../../assets/images/linkedinLanding.svg";
 import landingPageRight from "../../assets/images/landing-page-right.svg";
+
+import RotatingIcons from "../../components/landingPageRightAnim/landingPageRightAnim";
 import secondImg from "../../assets/images/second-img.svg";
 import fourthImg from "../../assets/images/fourth-img.svg";
-import fifthImg from "../../assets/images/fifth-img.svg";
+import fifthImg from "../../assets/images/fifth-img.png";
 import CountUp from "react-countup";
 import SlideInLeftImage from "../../components/SlidingImage/SlideInLeftImage";
 import ScrollTrigger from "react-scroll-trigger";
 import BounceHead from "../../components/SlidingImage/BounceHeads";
 import SpeakLoud from "../../components/SlidingImage/SpeakLoud";
-import { Accordion } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { MenuItem, Select } from "@mui/material";
+import FirstAnimation from "../FirstAnimation/firstAnimation";
+import GirlAnimation from "../GirlAnimation/GirlAnimation";
+import BoyAnimation from "../BoyAnimation/BoyAnimation";
+import SecondAnimation from "../SecondAnimation/SecondAnimation";
+import ImageSlider from "./ImageSlider";
 
-const ContactUs = () => {
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+const Personas = () => {
   const [menu, setMenu] = useState(false);
-  const [counterOn, setCounterOn] = useState(false);
   const [subMenu, setSubMenu] = useState(false);
 
   const navigate = useNavigate();
 
+  const svgPath = document.querySelectorAll(".textRole");
+  const svgPathAnim = anime({
+    targets: svgPath,
+    autoplay: true,
+    fill: ["none", "#000"],
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: "easeInOutSine",
+    duration: 700,
+    delay: anime.stagger(100, { direction: "reverse" }),
+  });
+
+  const svgPathQ = document.querySelector(".textRoleQ");
+
+  const svgPathQAnim = anime({
+    targets: svgPathQ,
+    fill: ["none", "#7367F0"],
+    autoplay: true,
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: "easeInOutSine",
+    duration: 1500,
+    delay: anime.stagger(100, { direction: "reverse" }),
+  });
+
   return (
     <LandingPageWrapper>
-      <section className="first contact-us-page">
-        <Header className="d-flex align-items-center position-relative contact-us-page mb-0">
+      <section className="first">
+        <Header className="d-flex align-items-center position-relative">
           <img
             src={logo}
             alt="logo"
@@ -238,17 +277,15 @@ const ContactUs = () => {
                   </div>
                 </div>
               </span>
-              <span className="me-5" onClick={() => navigate("/personas")}>
-                User Personas
-              </span>
+              <span className="me-5 active">User Personas</span>
               <span
-                className="me-0 me-md-auto active"
+                className="me-0 me-md-auto cursor-pointer"
                 onClick={() => navigate("/contact-us")}
               >
                 Help
               </span>
               <Button className="ms-0 ms-lg-auto white -btn">Login</Button>
-              <Button className="ms-0 ms-lg-3 white -btn">Join Us</Button>
+              <Button className="ms-0 ms-lg-2 white -btn">Join Us</Button>
             </div>
           </div>
           <div className="ms-auto d-block d-lg-none">
@@ -291,201 +328,66 @@ const ContactUs = () => {
             </svg>
           </div>
         </Header>
-      </section>
-      <section className="contact-us-section">
-        <p className="main-heading">We are here to help.</p>
-        <p className="sub-heading">Get the info you're looking for right now</p>
-        <Button className="blue max-w-100">View all help topics</Button>
-        <div className="row mt-5">
-          <div className="col-sm-12 col-md-12 col-lg-6">
-            <Accordion defaultActiveKey="0">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>
-                  <span>1</span> How the Marketplaces work?
-                </Accordion.Header>
-                <Accordion.Body>
-                  As a creative agency we work with you to develop solutions to
-                  address your brand needs. That includes various aspects of
-                  brand planning and strategy, marketing and design.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1">
-                <Accordion.Header>
-                  <span>2</span> What happens when your payment is in escrow?
-                </Accordion.Header>
-                <Accordion.Body>
-                  As a creative agency we work with you to develop solutions to
-                  address your brand needs. That includes various aspects of
-                  brand planning and strategy, marketing and design.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="2">
-                <Accordion.Header>
-                  <span>3</span> Take these steps to prevent scams
-                </Accordion.Header>
-                <Accordion.Body>
-                  As a creative agency we work with you to develop solutions to
-                  address your brand needs. That includes various aspects of
-                  brand planning and strategy, marketing and design.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="3">
-                <Accordion.Header>
-                  <span>4</span> How is our marketplace different from website
-                  applications?
-                </Accordion.Header>
-                <Accordion.Body>
-                  As a creative agency we work with you to develop solutions to
-                  address your brand needs. That includes various aspects of
-                  brand planning and strategy, marketing and design.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="4">
-                <Accordion.Header>
-                  <span>5</span> Other popular help topics
-                </Accordion.Header>
-                <Accordion.Body>
-                  As a creative agency we work with you to develop solutions to
-                  address your brand needs. That includes various aspects of
-                  brand planning and strategy, marketing and design.
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </div>
-          <div className="col-sm-12 col-md-12 col-lg-6">
-            <div className="form-custom mt-5 mt-md-0">
-              <div className="row">
-                <div className="col-sm-12 col-md-6">
-                  <Input
-                    type="email"
-                    name="email"
-                    label="First name"
-                    placeholder="First name"
-                    className="contact-us"
-                    requiredStar={true}
-                  />
-                </div>
-                <div className="col-sm-12 col-md-6">
-                  <Input
-                    type="email"
-                    name="email"
-                    label="Last name"
-                    placeholder="Last name"
-                    className="contact-us"
-                    requiredStar={true}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-12 col-md-6">
-                  <Input
-                    type="email"
-                    name="email"
-                    label="Company"
-                    placeholder="Company"
-                    className="contact-us"
-                    requiredStar={false}
-                  />
-                </div>
-                <div className="col-sm-12 col-md-6">
-                  <Input
-                    type="email"
-                    name="email"
-                    label="Email address"
-                    placeholder="Email address"
-                    className="contact-us"
-                    requiredStar={true}
-                  />
-                </div>
-              </div>
-              <div className="row align-items-end">
-                <div className="col-sm-12 col-md-12">
-                  <div className="d-flex align-items-end gap-3">
-                    <Input
-                      type="email"
-                      name="email"
-                      label="Contact Number"
-                      placeholder="United States"
-                      className="contact-us min-w-150"
-                      requiredStar={false}
-                    />
-                    <Input
-                      type="email"
-                      name="email"
-                      label=""
-                      placeholder="+1"
-                      className="contact-us w-100"
-                      requiredStar={false}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-12 col-md-12">
-                  <label>
-                    Reason for contacting us <span>*</span>
-                  </label>
-                  <Select className="contact-us-select">
-                    <MenuItem disabled value="">
-                      <em>Reason for contacting us</em>
-                    </MenuItem>
-                    <MenuItem value={20}>Accounts</MenuItem>
-                    <MenuItem value={21}>Technical support</MenuItem>
-                    <MenuItem value={22}>Payments</MenuItem>
-                    <MenuItem value={33}>
-                      Request a feature / provide feedback
-                    </MenuItem>
-                    <MenuItem value={34}>Others</MenuItem>
-                  </Select>
-                </div>
-              </div>
-              <div className="row mt-3">
-                <div className="col-sm-12 col-md-12">
-                  <Input
-                    type="textarea"
-                    name="email"
-                    label="How can we help?"
-                    placeholder=""
-                    className="contact-us"
-                    requiredStar={true}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-12 col-md-12">
-                  <Input
-                    type="text"
-                    name="email"
-                    label="How did you hear about us?"
-                    placeholder=""
-                    className="contact-us"
-                    requiredStar={true}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-sm-12 col-md-12">
-                  <CheckBox
-                    type="checkbox"
-                    name="terms_conditions"
-                    value="Terms&Conditions"
-                    className="contact-us"
-                    label="I have read and accepted the Terms of Use and Privacy Policy."
+
+        <div className="row m-0 align-items-center">
+          <div className="col-sm-12 col-md-12 col-lg-6 order-2 order-lg-1">
+            <MainPost>
+              <p className="mt-5 mt-lg-0 text-start text-md-start">
+                We enable you to be as competitive as you can be
+              </p>
+              <p className="sub-text text-start text-md-start mb-0 mb-lg-5">
+                ePosting provides a platform for users to showcase their skills,
+                build a track record, actively engage in industry-related
+                conversations, and connect with targeted users on the other end
+                of the jobs.
+              </p>
+              <div className="d-flex btn-group mt-4 mt-lg-0">
+                <Button className="ms-0 me-0 me-md-4 blue ms-auto ms-lg-0">
+                  Get registered
+                </Button>
+                <Button className="ms-0 blue me-auto me-lg-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    className="mb-1 me-2"
+                    fill="none"
                   >
-                    I have read and accepted the{" "}
-                    <span className="highlight">Terms of Use</span> and
-                    <span className="highlight"> Privacy Policy.</span>
-                  </CheckBox>
-                </div>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.83325 3.33301V16.6663L16.6666 9.99967L5.83325 3.33301Z"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>{" "}
+                  How it works
+                </Button>
               </div>
-              <div className="text-end">
-                <Button className="fill max-w-100">Contact us now</Button>
-              </div>
-            </div>
+            </MainPost>
+          </div>
+          {/* <div className="col-sm-12 col-md-12 col-lg-6">
+            <img
+              src={landingPageRight}
+              alt="landingPageRight"
+              className="w-100 h-100"
+            />
+          </div> */}
+          <div className="col-sm-12 col-md-12 col-lg-6 order-1 order-lg-2">
+            <SecondAnimation />
           </div>
         </div>
       </section>
-
+      <section className="image-sliders">
+        <p>Employers and candidates are connected in unprecedented ways</p>
+        <div>
+          <ImageSlider />
+        </div>
+      </section>
       <section className="account">
         <p className="main-heading">
           Join us to reimagine the way we approach finding a new job
@@ -494,7 +396,7 @@ const ContactUs = () => {
           An ecosystem of technologies, resources and User Personas that
           empowers each one of our users to be successful
         </p>
-        <PrimaryButton className="fit-content max-w-100">
+        <PrimaryButton className="fit-content landing">
           Create an account
         </PrimaryButton>
       </section>
@@ -555,4 +457,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Personas;
