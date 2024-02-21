@@ -1,5 +1,5 @@
 // LandingPage.jsx
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Button,
   Header,
@@ -38,9 +38,16 @@ const ContactUs = () => {
 
   const navigate = useNavigate();
 
+  const topRef = useRef(null);
+  useEffect(() => {
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <LandingPageWrapper>
-      <section className="first contact-us-page">
+      <section className="first contact-us-page" ref={topRef}>
         <Header className="d-flex align-items-center position-relative contact-us-page mb-0">
           <img
             src={logo}

@@ -1,5 +1,5 @@
 // LandingPage.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
 import {
   Button,
@@ -54,6 +54,13 @@ const Personas = () => {
 
   const navigate = useNavigate();
 
+  const topRef = useRef(null);
+  useEffect(() => {
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   const svgPath = document.querySelectorAll(".textRole");
   const svgPathAnim = anime({
     targets: svgPath,
@@ -79,7 +86,7 @@ const Personas = () => {
 
   return (
     <LandingPageWrapper>
-      <section className="first">
+      <section className="first" ref={topRef}>
         <Header className="d-flex align-items-center position-relative">
           <img
             src={logo}
@@ -328,7 +335,6 @@ const Personas = () => {
             </svg>
           </div>
         </Header>
-
         <div className="row m-0 align-items-center">
           <div className="col-sm-12 col-md-12 col-lg-6 order-2 order-lg-1">
             <MainPost>
