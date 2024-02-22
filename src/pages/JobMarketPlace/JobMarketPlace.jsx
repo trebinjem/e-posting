@@ -60,27 +60,27 @@ const JobMarketPlace = () => {
   }, []);
 
   const svgPath = document.querySelectorAll(".textRole");
-  const svgPathAnim = anime({
+  anime({
     targets: svgPath,
     autoplay: true,
     fill: ["none", "#000"],
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: "easeInOutSine",
-    duration: 700,
+    duration: 6000,
     delay: anime.stagger(100, { direction: "reverse" }),
   });
 
-  const svgPathQ = document.querySelector(".textRoleQ");
+  // const svgPathQ = document.querySelector(".textRoleQ");
 
-  const svgPathQAnim = anime({
-    targets: svgPathQ,
-    fill: ["none", "#7367F0"],
-    autoplay: true,
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: "easeInOutSine",
-    duration: 1500,
-    delay: anime.stagger(100, { direction: "reverse" }),
-  });
+  // anime({
+  //   targets: svgPathQ,
+  //   fill: ["none", "#7367F0"],
+  //   autoplay: true,
+  //   strokeDashoffset: [anime.setDashoffset, 0],
+  //   easing: "easeInOutSine",
+  //   duration: 600,
+  //   delay: anime.stagger(100, { direction: "reverse" }),
+  // });
 
   return (
     <LandingPageWrapper>
@@ -90,7 +90,7 @@ const JobMarketPlace = () => {
             src={logo}
             alt="logo"
             onClick={() => navigate("/")}
-            className="cursor-pointer"
+            className="cursor-pointer logo-mobile"
           />
           <div className={`mobile-menu w-100 ${menu ? "active" : ""}`}>
             <div className="text-end d-block d-lg-none">
@@ -351,7 +351,7 @@ const JobMarketPlace = () => {
                 empowers each one of our users to be successful.
               </p>
               <div className="d-flex btn-group">
-                <Button className="ms-0 me-0 me-md-4 blue ms-auto ms-lg-0">
+                <Button className="mt-5 mt-md-0 ms-0 me-0 me-md-4 blue ms-auto ms-lg-0">
                   Get registered
                 </Button>
                 <Button className="ms-0 blue me-auto me-lg-0">
@@ -402,7 +402,7 @@ const JobMarketPlace = () => {
           <div className="col-sm-12 col-md-12 col-lg-6 order-2 order-lg-1">
             <div className="shape-circle">
               <div className="d-flex align-items-start justify-content-center w-100 gap-4">
-                <div>
+                <div className="">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="48"
@@ -461,7 +461,7 @@ const JobMarketPlace = () => {
                 </div>
               </div>
               <div className="d-flex align-items-start justify-content-center w-100 gap-4 mt-5">
-                <div>
+                <div className="">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="52"
@@ -542,7 +542,7 @@ const JobMarketPlace = () => {
           <div className="col-sm-12 col-md-12 col-lg-6">
             <div className="shape-circle pink">
               <div className="d-flex align-items-start justify-content-center w-100 gap-4">
-                <div>
+                <div className="custom-padding-bg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="52"
@@ -633,7 +633,7 @@ const JobMarketPlace = () => {
                 </div>
               </div>
               <div className="d-flex align-items-start justify-content-center w-100 gap-4 mt-5">
-                <div>
+                <div className="custom-padding-bg">
                   <svg
                     width="49"
                     height="48"
@@ -843,9 +843,7 @@ const JobMarketPlace = () => {
           An ecosystem of technologies, resources and User Personas that
           empowers each one of our users to be successful
         </p>
-        <PrimaryButton className="fit-content landing">
-          Create an account
-        </PrimaryButton>
+        <PrimaryButton className="fit-content">Create an account</PrimaryButton>
       </section>
       <footer>
         <div className="row">
@@ -859,8 +857,7 @@ const JobMarketPlace = () => {
           <div className="col-sm-12 col-md-3">
             <div className="contents">
               <p className="heading">User Personas</p>
-              <p>Jobs workflow</p>
-              <p>Contract management</p>
+
               <p>How to</p>
             </div>
           </div>
@@ -889,14 +886,16 @@ const JobMarketPlace = () => {
                 width={54}
                 className="m-auto m-md-0"
               />
-              <p className="m-0 text-center">support@eposting.com</p>
+              <p className="m-0 text-center d-block d-md-none">
+                support@eposting.com
+              </p>
             </div>
           </div>
         </div>
         <div className="copy-right d-flex align-items-center">
           <img src={logo} alt="logo" />
           <span className="ms-0 ms-md-auto">Privacy Policy</span>
-          <span className="ms-0 ms-md-auto">Terms of Use</span>
+          <span className="ms-0 ms-md-3 me-md-auto">Terms of Use</span>
           <span>© 2023 ePosting Corp. all rights reserved</span>
         </div>
       </footer>

@@ -88,7 +88,7 @@ const LandingPage = () => {
             src={logo}
             alt="logo"
             onClick={() => navigate("/")}
-            className="cursor-pointer"
+            className="cursor-pointer logo-mobile"
           />
           <div className={`mobile-menu w-100 ${menu ? "active" : ""}`}>
             <div className="text-end d-block d-lg-none">
@@ -716,9 +716,7 @@ const LandingPage = () => {
           An ecosystem of technologies, resources and partners that empowers
           each one of our users to be successful
         </p>
-        <PrimaryButton className="fit-content landing">
-          Create an account
-        </PrimaryButton>
+        <PrimaryButton className="fit-content">Create an account</PrimaryButton>
       </section>
       <footer>
         <div className="row">
@@ -732,8 +730,7 @@ const LandingPage = () => {
           <div className="col-sm-12 col-md-3">
             <div className="contents">
               <p className="heading">Partners</p>
-              <p>Jobs workflow</p>
-              <p>Contract management</p>
+
               <p>How to</p>
             </div>
           </div>
@@ -762,14 +759,16 @@ const LandingPage = () => {
                 width={54}
                 className="m-auto m-md-0"
               />
-              <p className="m-0 text-center">support@eposting.com</p>
+              <p className="m-0 text-center d-block d-md-none">
+                support@eposting.com
+              </p>
             </div>
           </div>
         </div>
         <div className="copy-right d-flex align-items-center">
           <img src={logo} alt="logo" />
           <span className="ms-0 ms-md-auto">Privacy Policy</span>
-          <span className="ms-0 ms-md-auto">Terms of Use</span>
+          <span className="ms-0 ms-md-3 me-md-auto">Terms of Use</span>
           <span>© 2023 ePosting Corp. all rights reserved</span>
         </div>
       </footer>

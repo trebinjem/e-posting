@@ -801,7 +801,7 @@ const GirlAnimation = () => {
 		c1.9-3.2,4.3-6.2,6.8-9.3c0.7-0.8,1.4-1.6,2.1-2.5c1.9-2.2,3.8-4.4,5.5-6.7c7.4-9.7,14.9-22.2,20.4-35.3
 		C248,114.6,251.7,100.9,251.7,88.7z"
             />
-            <motion.path
+            {/* <motion.path
               initial="hidden"
               animate={mainControls}
               variants={{
@@ -854,6 +854,204 @@ const GirlAnimation = () => {
 		c0.8,0,1.4-0.3,1.9-0.9c0.5-0.6,0.8-1.7,0.8-3.1c0-1.3-0.2-2.2-0.7-2.9c-0.5-0.6-1.1-0.9-1.9-0.9c-0.6,0-1.1,0.1-1.5,0.4
 		c-0.4,0.3-0.7,0.7-0.9,1.2c-0.2,0.6-0.3,1.3-0.3,2.1c0,1.5,0.2,2.5,0.6,3.1C196.9,133.7,197.5,134,198.4,134z M210.5,132.5v3.7
 		h-3.8v-3.7H210.5z M210.6,118.9l-0.9,12h-2.2l-1-12H210.6z"
+            /> */}
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3 }}
+              d="M87.9,118.5V136h-3.1v-17.5H87.9z"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.1 }}
+              fill="#4B4B4B"
+              d="M96.3,117.7h3.1v7.3h0.1c0.4-0.5,0.9-1,1.4-1.3c0.6-0.3,1.3-0.5,2-0.5c2.1,0,4,1.5,4,5.3v7.6h-3.1v-7.3   c0-1.7-0.5-3-2.1-3c-1.1,0-1.9,0.7-2.2,1.7c-0.1,0.3-0.1,0.6-0.1,1v7.7h-3.1V117.7z"
+              className="textRole"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.2 }}
+              fill="#4B4B4B"
+              d="M116.7,136l-0.2-1.4h-0.1c-0.7,1-1.9,1.6-3.4,1.6c-2.3,0-3.7-1.7-3.7-3.8c0-3.2,2.8-4.8,6.9-4.8v-0.2   c0-1-0.4-2.2-2.4-2.2c-1.1,0-2.3,0.4-3.1,0.9l-0.6-2c0.9-0.5,2.4-1.1,4.3-1.1c3.8,0,4.9,2.5,4.9,5.2v4.7c0,1.1,0,2.2,0.2,3H116.7z    M116.2,129.8c-1.9,0-4,0.4-4,2.4c0,1.3,0.8,1.9,1.7,1.9c1.1,0,1.9-0.7,2.2-1.7c0.1-0.2,0.1-0.5,0.1-0.7V129.8z"
+              className="textRole"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.3 }}
+              fill="#4B4B4B"
+              d="M124.1,123.3l1.8,6.4c0.3,1.1,0.6,2.1,0.8,3.2h0.1c0.2-1.1,0.5-2.1,0.8-3.2l1.8-6.4h3.2L128,136h-3   l-4.3-12.7H124.1z"
+              className="textRole"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.4 }}
+              fill="#4B4B4B"
+              d="M136.2,130.5c0.1,2.5,1.7,3.4,3.6,3.4c1.3,0,2.3-0.2,3.1-0.5l0.4,2.1c-1,0.4-2.4,0.7-4,0.7   c-3.9,0-6.1-2.5-6.1-6.4c0-3.7,2.1-6.8,5.7-6.8c3.7,0,5,3.1,5,6c0,0.6,0,1.1-0.1,1.4H136.2z M141.1,128.4c0-1.4-0.5-3.1-2.3-3.1   c-1.7,0-2.5,1.8-2.6,3.1H141.1z"
+              className="textRole"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.5 }}
+              fill="#4B4B4B"
+              d="M158,136l-0.2-1.4h-0.1c-0.7,1-1.9,1.6-3.4,1.6c-2.3,0-3.7-1.7-3.7-3.8c0-3.2,2.8-4.8,6.9-4.8v-0.2   c0-1-0.4-2.2-2.4-2.2c-1.1,0-2.3,0.4-3.1,0.9l-0.6-2c0.9-0.5,2.4-1.1,4.3-1.1c3.8,0,4.9,2.5,4.9,5.2v4.7c0,1.1,0,2.2,0.2,3H158z    M157.6,129.8c-1.9,0-4,0.4-4,2.4c0,1.3,0.8,1.9,1.7,1.9c1.1,0,1.9-0.7,2.2-1.7c0.1-0.2,0.1-0.5,0.1-0.7V129.8z"
+              className="textRole"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.6 }}
+              fill="#4B4B4B"
+              d="M166.1,139c0.9-0.1,1.7-0.3,2.2-0.9c0.6-0.6,0.8-1.6,0.8-4.2v-10.6h3.1v11.4c0,2.7-0.5,4.2-1.6,5.3   c-1,1-2.7,1.4-4.1,1.4L166.1,139z M172.2,119.9c0,0.9-0.7,1.7-1.7,1.7c-1,0-1.7-0.7-1.7-1.7c0-1,0.7-1.7,1.7-1.7   C171.6,118.2,172.2,118.9,172.2,119.9z"
+              className="textRole"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.7 }}
+              fill="#4B4B4B"
+              d="M186.2,129.6c0,4.8-3.1,6.7-5.9,6.7c-3.3,0-5.8-2.4-5.8-6.5c0-4.3,2.6-6.7,6-6.7   C183.9,123.1,186.2,125.6,186.2,129.6z M177.6,129.7c0,2.3,1,4.3,2.8,4.3c1.7,0,2.7-2,2.7-4.3c0-1.9-0.7-4.3-2.7-4.3   C178.4,125.4,177.6,127.7,177.6,129.7z"
+              className="textRole"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.8 }}
+              fill="#4B4B4B"
+              d="M188.6,136c0.1-0.9,0.1-2.3,0.1-3.5v-14.8h3.1v7.3h0.1c0.7-1.2,2-1.9,3.6-1.9c2.8,0,4.8,2.6,4.8,6.4   c0,4.5-2.6,6.8-5.2,6.8c-1.5,0-2.7-0.6-3.5-2.1h-0.1l-0.1,1.8H188.6z M191.7,131c0,0.3,0,0.5,0.1,0.8c0.3,1.3,1.3,2.1,2.4,2.1   c1.8,0,2.8-1.6,2.8-4.2c0-2.3-0.9-4.1-2.8-4.1c-1.1,0-2.1,0.9-2.4,2.1c-0.1,0.2-0.1,0.5-0.1,0.8V131z"
+              className="textRole"
+            />
+            <motion.path
+              initial="hidden"
+              animate={mainControls}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  scale: 1,
+                  fill: "transparent",
+                },
+                visible: {
+                  opacity: 1,
+                  scale: 1,
+                  fill: "#4B4B4B",
+                },
+              }}
+              transition={{ duration: 0.3, delay: 3.9 }}
+              fill="#4B4B4B"
+              d="M202.3,134.3c0-1.2,0.8-2,1.9-2c1.1,0,1.9,0.8,1.9,2c0,1.1-0.7,1.9-1.9,1.9   C203.1,136.3,202.3,135.4,202.3,134.3z M203,130.6l-0.4-12.1h3.3l-0.4,12.1H203z"
+              className="textRole"
             />
           </motion.g>
         </svg>

@@ -30,6 +30,8 @@ const InputWrapper = styled.button`
     .max-w-100 {
       width: 100% !important;
     }
+    font-size: 12px;
+    padding: 10px 25px;
   }
 `;
 

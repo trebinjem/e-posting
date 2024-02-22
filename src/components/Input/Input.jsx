@@ -88,6 +88,9 @@ const InputWrapper = styled.div`
       padding: 25px 82px 25px 42px;
     }
   }
+  input {
+    border-radius: 100px;
+  }
   @media (max-width: 768px) {
     input {
       border-radius: 100px;

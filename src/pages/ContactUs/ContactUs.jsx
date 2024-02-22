@@ -53,7 +53,7 @@ const ContactUs = () => {
             src={logo}
             alt="logo"
             onClick={() => navigate("/")}
-            className="cursor-pointer"
+            className="cursor-pointer logo-mobile"
           />
           <div className={`mobile-menu w-100 ${menu ? "active" : ""}`}>
             <div className="text-end d-block d-lg-none">
@@ -501,9 +501,7 @@ const ContactUs = () => {
           An ecosystem of technologies, resources and User Personas that
           empowers each one of our users to be successful
         </p>
-        <PrimaryButton className="fit-content max-w-100">
-          Create an account
-        </PrimaryButton>
+        <PrimaryButton className="fit-content">Create an account</PrimaryButton>
       </section>
       <footer>
         <div className="row">
@@ -517,8 +515,7 @@ const ContactUs = () => {
           <div className="col-sm-12 col-md-3">
             <div className="contents">
               <p className="heading">User Personas</p>
-              <p>Jobs workflow</p>
-              <p>Contract management</p>
+
               <p>How to</p>
             </div>
           </div>
@@ -547,7 +544,9 @@ const ContactUs = () => {
                 width={54}
                 className="m-auto m-md-0"
               />
-              <p className="m-0 text-center">support@eposting.com</p>
+              <p className="m-0 text-center d-block d-md-none">
+                support@eposting.com
+              </p>
             </div>
           </div>
         </div>

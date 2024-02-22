@@ -31,7 +31,7 @@ const data = [
   {
     id: "thirdImg",
     image: slider3,
-    firstText: "Tim, Job poster",
+    firstText: "Bill, Job poster",
     shortText:
       "Earning extra income is the icing on the cake of the hiring process for Bill. His passion for connecting people and helping them reach their goals aligns perfectly with ePosting’s mission. Through ePosting, he may use the jobs economy to his advantage while making a positive impact on the lives of job seekers and recruiting practices of businesses.",
     fullText:
@@ -382,7 +382,14 @@ export default function ImageSlider() {
       <FullView />
       <Slider {...settings}>
         {data.map((item) => (
-          <div className={`cardSlider ${item.id}`} key={item.id}>
+          <div
+            className={`cardSlider ${item.id}`}
+            key={item.id}
+            onMouseEnter={() =>
+              window.innerWidth <= 768 && setExpanded(item.id)
+            }
+            onMouseLeave={() => window.innerWidth <= 768 && setExpanded(null)}
+          >
             <img src={item.image} alt="slider1" />
             <div
               className="content"

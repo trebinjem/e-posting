@@ -252,6 +252,9 @@ label span {
   }
 }
 @media (max-width: 768px) {
+  .logo-mobile {
+    width: 112px;
+  }
   .w-90 {
     width: 100%;
   }

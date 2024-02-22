@@ -146,7 +146,7 @@ const LandingPageWrapper = styled.div`
     padding: 133px 20px;
 
     @media (max-width: 768px) {
-      padding: 34px 56px;
+      padding: 60px 56px;
     }
     p {
       color: var(--Extra-Dark, #4b4b4b);
@@ -184,6 +184,15 @@ const LandingPageWrapper = styled.div`
   }
   .have-job {
     padding: 140px 0;
+    @media (max-width: 768px) {
+      padding: 30px 0 100px 0;
+    }
+    .custom-padding-bg {
+      padding-left: 150px;
+      @media (max-width: 768px) {
+        padding-left: 0;
+      }
+    }
     .shape-circle {
       background-size: contain;
       background-repeat: no-repeat;
@@ -590,8 +599,26 @@ const LandingPageWrapper = styled.div`
       padding: 66px 34px;
     }
     @media (max-width: 768px) {
-      padding: 25px;
-      width: calc(100% - 50px);
+      padding: 36px 25px;
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: 30px;
+      .main-heading {
+        font-size: 16px !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+        line-height: 24px !important; /* 150% */
+        max-width: 270px !important;
+        margin: auto auto 10px auto !important;
+      }
+      .sub-heading {
+        color: var(--Extra-Semi-Dark, #242745) !important;
+        font-size: 12px !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        line-height: 24px !important;
+        margin-bottom: 10px !important;
+      }
     }
     &::before {
       content: "";
@@ -605,7 +632,9 @@ const LandingPageWrapper = styled.div`
       background-repeat: no-repeat;
       background-image: url("src/assets/images/account-left.png");
       @media (max-width: 576px) {
-        width: 60%;
+        width: 150px;
+        height: 150px;
+        background-size: contain;
       }
     }
     &::after {
@@ -623,8 +652,10 @@ const LandingPageWrapper = styled.div`
       opacity: 0.2;
       mix-blend-mode: color-burn;
       @media (max-width: 576px) {
-        width: 60%;
-        bottom: 0;
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+        top: calc(100% - 150px);
       }
     }
     .main-heading {
@@ -657,7 +688,7 @@ const LandingPageWrapper = styled.div`
       padding: 160px 50px 54px 50px;
     }
     @media (max-width: 768px) {
-      padding: 120px 30px 54px 30px;
+      padding: 14px 30px 54px 30px;
     }
     .contents {
       color: #fff;
@@ -714,7 +745,7 @@ const LandingPageWrapper = styled.div`
 const Header = styled.header`
   position: fixed !important;
   width: calc(100% - 184px);
-  top: 40px;
+  top: 20px;
   margin: 0 92px 132px 92px;
   padding: 48px;
   color: #fff;
@@ -723,7 +754,7 @@ const Header = styled.header`
   font-weight: 600;
   line-height: 24px;
   border-radius: 100px;
-  max-height: 129px;
+  max-height: 96px;
   background: var(--primary-primary-500-base, #7367f0);
   z-index: 999;
   span {
