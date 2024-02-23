@@ -52,7 +52,7 @@ const LandingPageWrapper = styled.div`
       }
       @media (max-width: 768px) {
         .card {
-          padding: 24px 16px;
+          padding: 24px 0px;
           min-width: 200px;
           p {
             font-size: 18px !important;
