@@ -520,10 +520,10 @@ const JobMarketPlace = () => {
                   </svg>
                 </div>
                 <div className="shape-circle-content">
-                  <p>Unlock opportunities </p>
+                  <p>Streamline payment </p>
                   <p>
-                    ePosting not only creates job opportunities for everyone but
-                    also set them up for success.
+                    We streamline payment processes, saving you effort and
+                    making sure you're paid on time.
                   </p>
                 </div>
               </div>
