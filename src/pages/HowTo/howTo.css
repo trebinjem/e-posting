@@ -1,0 +1,75 @@
+@media (min-width: 969px) {
+  .custom-heading-max-969 {
+    display: none;
+  }
+  .custom-para-max-969 {
+    display: none;
+  }
+  .how-TO-maincontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: -50px;
+  }
+  .job-container{
+    padding: 0 71px;
+  }
+  .job-container{
+    margin: 0px 100px;
+  }
+
+  .job-container-how-to
+  {
+    margin:100px 0px !important;
+  }
+
+
+}
+
+.how-TO-maincontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 969px) {
+  .custom-heading-min-969 {
+    display: none;
+  }
+  .custom-para-min-969 {
+    display: none;
+  }
+
+  .job-container-how-to
+  {
+    margin:10px 0px !important;
+    padding-left: 10px;
+  }
+  .custom-heading-max-969 {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+  .custom-para-max-969 {
+    font-size: 13px !important;
+    line-height: 20px !important;
+  }
+
+  .custom-heading {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  .how-TO-maincontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+  .paraSize{
+    font-size: 12px !important;
+    line-height: 20px !important;
+    margin-bottom: 20px !important;
+  }
+}

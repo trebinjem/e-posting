@@ -1,0 +1,173 @@
+
+.header-title{
+  color: #4B4B4B !important;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  line-height: 46px !important;
+  margin-top: 20px;
+  
+}
+
+
+.dropdown-toggle {
+  width: 100% !important;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #DBDADE;
+  border-radius: 4px;
+  padding: 7px 14px;
+  position: relative; /* Add this for positioning the arrow */
+}
+
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 7px 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  margin-left: 0.255em;
+  margin-top: 0.555em;
+  vertical-align: 0.255em;
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  float: right;
+}
+
+.dropdown-toggle:hover .dropdown-menu {
+  display: block;
+}
+
+.custom-button-style{
+  padding: 13px 26px 13px 26px !important ;
+}
+
+@media (max-width: 5200px) and (min-width: 768px) {
+  .custom-main-post {
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+    margin-top: -5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-main-post {
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .custom-button-text {
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+
+  .MuiButtonBase-root {
+    display: flex !important;
+    align-items: start !important;
+  }
+
+  .header-title{
+    color: #4B4B4B !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+    
+  }
+  .custom-button-style{
+    font-size: 12px !important;
+    line-height: 16px !important;
+    padding: 6px 14px 6px 14px !important;
+    margin-top:-10px ;
+  }
+
+
+  
+.dropdown-toggle {
+  width: 100% !important;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #DBDADE;
+  border-radius: 4px;
+  padding: 7px 14px;
+  position: relative; /* Add this for positioning the arrow */
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 7px 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-toggle::after {
+  content: '';
+  display: inline-block;
+  margin-left: 0.255em;
+  margin-top: 0.555em;
+  vertical-align: 0.255em;
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  float: right;
+}
+
+.dropdown-toggle:hover .dropdown-menu {
+  display: block;
+}
+
+  
+}
+
+@media (max-width: 596px) {
+  .custom-heading-3 {
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    color: #171725 !important;
+  }
+
+}
+
+/* .MuiAccordionSummary-expandIconWrapper{
+
+} */

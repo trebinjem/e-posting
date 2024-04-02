@@ -1,0 +1,53 @@
+.infi-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+ 
+}
+
+.infi-container img{
+  height: 120px;
+  width: 120px;
+}
+
+.infi-container:before,
+.infi-container:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.infi-container:hover .infi-content {
+  animation-play-state: paused;
+}
+
+.infi-content {
+  display: inline-flex;
+
+  animation: scrollAnimation 20s linear infinite;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@media (max-width:945px) {
+
+  .infi-container img{
+    height: 80px;
+    width: 80px;
+  }
+  .infi-container{
+    gap: 10px !important;
+  }
+  
+}

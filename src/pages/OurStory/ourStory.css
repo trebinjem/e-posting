@@ -1,0 +1,15 @@
+@media (max-width:768px) {
+  .ourStory{
+    margin-top: 7%;
+    padding: 0px 14px;
+ }
+ .fKDjqg .first {
+  padding-top: 59px !important;
+}
+}
+@media (min-width:768px) {
+  .ourStory{
+     margin-top: -4%;
+  }
+ 
+} 

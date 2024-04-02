@@ -1,0 +1,144 @@
+
+.first-blue-btn{
+
+  background-color: #7367F0 !important;
+  color: white !important;
+}
+.first-blue-btn:hover{
+
+  background-color: #ffffff !important;
+  color: #7367F0 !important;
+}
+
+@media (max-width:964px) {
+  .resource-market-container{
+    margin-top: -14%;
+    padding-left: 30px ;
+  }
+  .title-arrow{
+    font-size: 22px;
+  }
+  
+  .first-blue-btn{
+
+    width: 100% !important;
+  }
+
+  .action-btn-sm{
+    padding: 4px 14px !important;
+ 
+    border-radius: 28px;
+    font-size: 12px !important;
+    color: white !important  ;
+    border: none !important;
+    background-color: #7367F0 !important;
+    transition: background-color 0.3s ease, color 0.3s ease;  
+    
+  }
+  .action-btn-sm:hover{
+    background-color: transparent !important;
+    color: #7367F0 !important;
+
+    }
+  
+    .action-btn{
+      padding: 13px 86px;
+      width: 100% !important;
+      border-radius: 28px;
+      font-size: 18px;
+      color: white  ;
+      border: none;
+      background-color: #7367F0;
+      transition: background-color 0.3s ease, color 0.3s ease;  
+      
+
+    }
+    .action-btn:hover{
+    background-color: white;
+    color: #7367F0;
+    
+    }
+
+    .eposting-short-dis{
+      font-size: 12px !important;
+    }
+    .short-title
+    {
+      font-size: 16px;
+    }
+    .short-md-title
+    {
+      font-size: 12px;
+    }
+    .md-container-arrow{
+      height: 200px;
+    }
+}
+@media (min-width:964px) {
+  .resource-market-container{
+    margin-top: -7%;
+    padding-left: 7% ;
+
+  }
+  
+     .eposting-short-dis{
+      font-size: 1.3rem !important;
+    }
+.action-btn{
+  padding: 13px 86px;
+  border-radius: 28px;
+  font-size: 18px;
+  color: white  ;
+  border: none;
+  background-color: #7367F0;
+  transition: background-color 0.3s ease, color 0.3s ease;  
+  
+
+}
+
+
+  .first-blue-btn{
+
+    background-color: #7367F0 !important;
+    color: white;
+  }
+
+
+
+  .action-btn:hover{
+  background-color: white;
+  color: #7367F0;
+  
+  }
+
+  .short-title
+  {
+    font-size: 48px;
+  }
+  .short-md-title
+  {
+    font-size: 32px;
+  }
+
+  .md-container-arrow{
+    height: 534px;
+  }
+
+
+  .action-btn-sm{
+    padding: 13px 26px;
+   
+    border-radius: 28px;
+    font-size: 18px;
+    color: white  ;
+    border: none;
+    background-color: #7367F0;
+    transition: background-color 0.3s ease, color 0.3s ease;  
+    
+  }
+  .action-btn-sm:hover{
+    background-color: white;
+    color: #7367F0;
+    }
+}
+

@@ -1,0 +1,82 @@
+@keyframes fillAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+    .snakecontainer
+  { 
+    height:'458px';
+    width:100%;
+  } 
+
+
+#snake-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: snakeMove 5s linear forwards;
+}
+
+.modify-custom-btn {
+  background-color: #7367f0 !important;
+  color: white !important;
+}
+
+.modify-custom-btn:hover {
+  background-color: transparent !important;
+  color: #7367f0 !important;
+}
+
+@media (max-width: 991px) {
+  .custom-column-reverse {
+    flex-direction: column-reverse !important;
+  }
+
+  .custom-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+
+  .custom-padding-left {
+    margin-top: 4rem !important;
+  }
+
+  .custom-margin {
+    margin: 0rem 0rem !important;
+  }
+
+  .custom-flex-column {
+    flex-direction: column !important;
+  }
+  .custom-margin-top {
+    margin-top: 2rem;
+  }
+  .custom-padding-left-para {
+    padding-left: 0.5rem !important;
+    width: 85% !important;
+  }
+  .snakecontainer
+  { 
+  
+    width:100%;
+  } 
+
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .custom-padding-left {
+    padding-left: 3rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-button {
+    flex-direction: column !important;
+  }
+}
+
+/* @media (max-width: 992px) {
+} */

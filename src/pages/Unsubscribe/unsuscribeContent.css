@@ -1,0 +1,44 @@
+@media (max-width:678px) {
+    .unsubscrib-container{
+      margin-top: -10%;
+    }
+    .action-btn{
+      padding: 13px 86px;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 28px;
+      color: white  ;
+      white-space: nowrap;
+      border: none;
+      background-color: #7367F0;
+      transition: background-color 0.3s ease, color 0.3s ease;  
+  
+    }
+    .action-btn:hover{
+     background-color: white;
+     color: #7367F0;
+     
+    }
+ 
+}
+@media (min-width:678px) {
+  .unsubscrib-container{
+    margin-top: -10%;
+  }
+  .action-btn{
+    padding: 13px 86px;
+    border-radius: 28px;
+    font-size: 18px;
+    color: white  ;
+    border: none;
+    background-color: #7367F0;
+    transition: background-color 0.3s ease, color 0.3s ease;  
+    
+
+  }
+  .action-btn:hover{
+   background-color: white;
+   color: #7367F0;
+   
+  }
+}

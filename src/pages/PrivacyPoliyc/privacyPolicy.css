@@ -1,0 +1,26 @@
+@media (max-width: 5000px) and (min-width: 768px) {
+  .custom-padding {
+    padding: 0rem 2.5rem;
+  }
+  .main-policy-coontainer{
+    margin-top: -7.5% !important;
+
+    padding-right: 105px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-padding {
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 811px) {
+  .custom-flex-coulmn {
+    flex-direction: column;
+    
+  }
+  .main-policy-coontainer{
+    margin-top: -11% !important;
+  }
+}

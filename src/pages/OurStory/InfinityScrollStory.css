@@ -1,0 +1,156 @@
+
+
+.normal-button{
+  width: 204px;
+    max-width:100%;
+    height: 52px;
+    border: 1px solid #898888;
+    padding: 15px 30px 15px auto;
+    border-radius: 50px;
+    background-color: #f4f3fe;
+}
+
+.color-button{
+  width:204px;
+  color:white;
+  height:52px;
+  border: 1px solid #28C76F;
+   padding:15px 30px 15px auto;
+  border-radius:50px;
+  background-color: #28C76F;
+}
+
+.bottom-container{
+  margin-top: 90px;
+} 
+
+.infi-container-right{
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 2rem 2rem;
+}
+.infi-container-left {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 0rem 2rem;
+}
+
+.infi-container-right:before,
+.infi-container-right:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.infi-container-left:before,
+.infi-container-left:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.infi-container-right:hover .infi-content-right {
+  animation-play-state: paused;
+}
+
+.infi-container-left:hover .infi-content-left {
+  animation-play-state: paused;
+}
+
+.infi-content-right {
+  display: inline-flex;
+  gap:1.5rem;
+  margin-right: 0.4rem;
+  animation: scrollAnimationRight 20s linear infinite;
+}
+
+.infi-content-left {
+  display: inline-flex;
+  gap:1.5rem;
+  margin-right: 0.4rem;
+  animation: scrollAnimationLeft 20s linear infinite;
+}
+
+@keyframes scrollAnimationRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollAnimationLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 795px) {
+  .custom-headin-1 {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+  .custom-para {
+    font-size: 12px !important;
+    line-height: 20px !important;
+  }
+
+  .custom-main-heading {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+  .custom-main-para {
+    font-size: 13px !important;
+    line-height: 20px !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .normal-button, .color-button {
+    width: 98.35px;
+    height: 30.68px;
+    padding: 10px 16px 10px auto;
+    opacity: 1;
+    font-size: 7.64px;
+    line-height: 10.76px;
+
+    /* You can adjust other properties as needed for small screens */
+  }
+  .infi-container-right,
+  .infi-container-left {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 0.6rem 0rem !important;
+  
+  }
+  .bottom-container{
+    margin-top: 10px;
+  }
+  .infi-content-right {
+    display: inline-flex;
+    gap: 10.89px;
+    margin-right: -12px;
+  }
+
+  .infi-content-left {
+    display: inline-flex;
+    gap: 10.89px;
+    margin-right:-12px;
+  }
+
+
+}

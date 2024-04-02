@@ -1,0 +1,15 @@
+@media (max-width: 5000px) and (min-width: 768px) {
+  
+  .main-policy-coontainer{
+    margin-top: -7.5% !important;
+
+    padding-right: 105px;
+  }
+}
+
+
+@media (max-width: 811px) {
+  .main-policy-coontainer{
+    margin-top: -11% !important;
+  }
+}
