@@ -101,11 +101,12 @@ const FaqContent = () => {
   return (
     <>
       <MainPost className=" custom-main-post">
+        <div className="d-flex flex-column flex-md-row align-items-center justify-content-between">
         <h1 className="header-title" >
           Below you can find answers to questions we get asked the most
         </h1>
 
-        <div className=" d-md-none mt-4 mb-0 dropdown">
+        <div className=" mt-4 mb-0 dropdown w-full">
           <h3 style={{color:"#4B465C" , fontSize:"15px" , lineHeight:"17.63px"}}>Filter by Tags</h3>
           <div className="d-flex align-item-center justify-content-between">
           <button className="dropdown-toggle">
@@ -120,6 +121,8 @@ const FaqContent = () => {
           </div>
         
         </div>
+        </div>
+
 
         <div className="mb-5 mt-4 d-flex flex-column gap-2">
           {accordionContent.map((accordion, index) => (
@@ -157,7 +160,7 @@ const FaqContent = () => {
                 </div>
               </AccordionSummary>
 
-              <AccordionDetails>{accordion.details}</AccordionDetails>
+              <AccordionDetails> <p className="faq-des">{accordion.details}</p> </AccordionDetails>
             </Accordion>
           ))}
         </div>

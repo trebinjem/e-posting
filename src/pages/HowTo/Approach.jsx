@@ -28,7 +28,7 @@ const Approach = () => {
          
             <div className="w-100 d-flex align-items-start gap-5 px-2 px-lg-5 my-rem-10">
               <div className="w-100 pl-0 pl-lg-5">
-                <h1 className="custom-heading mt-3  mb-4" style={headingStyle}>
+                <h1 className="custom-heading my-4 mt-md-4 mb-md-5" style={headingStyle}>
                   Our unique approach
                 </h1>
                 <p className="paraSize"  style={paraStyle}>
@@ -57,14 +57,14 @@ const Approach = () => {
         </div>
 
         <div className="col-sm-12 col-md-12 col-lg-6 mt-5 mt-md-0">
-          <MainPost>
+          
             <img
               src={girlMakePainting}
               alt="girlImage"
               className="w-100"
               style={{}}
             />
-          </MainPost>
+         
         </div>
       </div>
       </div>

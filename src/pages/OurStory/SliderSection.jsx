@@ -20,7 +20,7 @@ const SliderSection = () => {
   };
 
   return (
-    <div className="mb-5 w-100postition-relative" style={{ backgroundColor: "#7367F014" }}>
+    <div className="mb-0 mb-md-5 w-100postition-relative" style={{ backgroundColor: "#7367F014" }}>
       <NavBar />
 
       <div className="w-100 ourStory  ">

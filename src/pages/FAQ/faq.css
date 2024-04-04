@@ -19,6 +19,9 @@
   position: relative; /* Add this for positioning the arrow */
 }
 
+.dropdown{
+  width: 203.33px;
+}
 
 
 .dropdown-menu {
@@ -65,6 +68,15 @@
   padding: 13px 26px 13px 26px !important ;
 }
 
+.faq-des{
+  font-size: 18px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  text-align: justify;
+  margin-bottom: 0px !important;
+}
+
+
 @media (max-width: 5200px) and (min-width: 768px) {
   .custom-main-post {
     padding-left: 7rem !important;
@@ -103,9 +115,18 @@
     padding: 6px 14px 6px 14px !important;
     margin-top:-10px ;
   }
+  .faq-des{
+    font-size: 12px  !important;
+    line-height: 20px !important; 
+    font-weight: 400 !important;
+    text-align: justify !important;
+    margin-bottom: 0px;
+  }
 
+  .dropdown{
+    width: 100%;
+  }
 
-  
 .dropdown-toggle {
   width: 100% !important;
   text-align: left;

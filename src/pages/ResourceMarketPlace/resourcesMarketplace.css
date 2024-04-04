@@ -130,15 +130,15 @@
    
     border-radius: 28px;
     font-size: 18px;
-    color: white  ;
-    border: none;
-    background-color: #7367F0;
-    transition: background-color 0.3s ease, color 0.3s ease;  
+    color: white !important  ;
+    border: none !important;
+    background-color: #7367F0 !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;  
     
   }
   .action-btn-sm:hover{
-    background-color: white;
-    color: #7367F0;
+    background-color: white !important;
+    color: #7367F0 !important;
     }
 }
 

@@ -1,5 +1,6 @@
 import { MainPost } from "../landingPage/LandingPage.style";
-
+import { useEffect, useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 import girlImage from "./assets/girlImage.svg";
 import boyComputer from "./assets/boyComputer.svg";
 import hande from "./assets/hande.svg";
@@ -8,12 +9,59 @@ import easyAccess from "./assets/easyAccess.svg";
 import saveTime from "./assets/saveTime.svg";
 
 const AnimatedImage = () => {
+
+  const [isTopImageVisible, setIsTopImageVisible] = useState(false);
+  const [isBottomImageVisible, setIsBottomImageVisible] = useState(false);
+  const [showArrow, setShowArrow] = useState(false);
+  const topImageRef = useRef(null);
+  const bottomImageRef = useRef(null);
+  
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const bottomPosition = window.scrollY + window.innerHeight;
+      const topImageOffset = topImageRef.current.offsetTop;
+      const bottomImageOffset = bottomImageRef.current.offsetTop;
+
+      if (bottomPosition > topImageOffset) {
+        setIsTopImageVisible(true);
+      }
+
+      if (bottomPosition > bottomImageOffset) {
+        setIsBottomImageVisible(true);
+        setTimeout(() => {
+          setShowArrow(true);
+        }, 2000); 
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+    
+
+
   return (
     <>
       <div className="row my-5 align-items-center w-100 custom-row-reverse">
         <div className="col-sm-12 py-4 col-md-12 col-lg-6">
           <MainPost>
-            <img src={girlImage} alt="girlImage" className="w-100" style={{}} />
+            {/* <img src={girlImage} alt="girlImage" className="w-100" style={{}} /> */}
+            <motion.img
+              src={girlImage}
+              alt="girlImage"
+              className="w-100"
+              style={{}}
+              initial={{ opacity: 0, x: -100 }}
+              animate={isTopImageVisible ? { opacity: 1, x: 0 } : { opacity: 0 }}              
+              transition={{ duration: 1, ease: 'easeInOut' }}
+              ref={topImageRef}
+            />
           </MainPost>
         </div>
 
@@ -91,12 +139,29 @@ const AnimatedImage = () => {
 
         <div className="col-sm-12 col-md-12 col-lg-6">
           <MainPost>
-            <img
+               {showArrow ? (
+              <motion.img
               src={boyComputer}
               alt="boyComputer"
               className="w-100"
               style={{}}
+              initial={{ opacity: 0, x: 100 }}
+              animate={isBottomImageVisible ? { opacity: 1, x: 0 } : { opacity: 0 }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
+              ref={bottomImageRef}
             />
+            ) : (
+              <motion.img
+                src={boyComputer}
+                alt="boyComputer"
+                className="w-100"
+                style={{}}
+                initial={{ opacity: 0, x: 100 }}
+                animate={isBottomImageVisible ? { opacity: 1, x: 0 } : { opacity: 0 }}
+                transition={{ duration: 1, ease: 'easeInOut' }}
+                ref={bottomImageRef}
+              />
+            )}
           </MainPost>
         </div>
       </div>

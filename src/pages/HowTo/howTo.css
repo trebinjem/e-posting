@@ -1,3 +1,15 @@
+
+
+.header-titles{
+  font-size: 32px !important;
+  line-height: 84px !important;
+  font-weight: 700;
+  margin-bottom: 2%;
+}
+
+
+
+
 @media (min-width: 969px) {
   .custom-heading-max-969 {
     display: none;
@@ -24,9 +36,47 @@
     margin:100px 0px !important;
   }
 
+  .main-container-job-section {
+      max-width: 1579px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      justify-content: space-between;
+      padding: 0px 0px 0px 0px ;
+  }
+  .inner-container
+  {
+    max-width: 677.8px;
+    text-align: justify;
+    
+  }
+  .paraSize {
+    font-size: 1.125rem !important; /* Converted from 18px to rem */
+    line-height: 1.75rem !important; /* Converted from 28px to rem */
+    margin-bottom: 1.75rem !important; /* Adjusted to match line height */
+  }
+  
 
 }
 
+@media screen and (max-width: 1550px) and (min-width: 900px) {
+  .main-container-job-section {
+    max-width: 98.6875rem !important; /* Converted from 1579px to rem */
+    padding: 0px 3rem !important;  /* Converted from 1% to rem */
+  }
+
+  .inner-container
+  {
+    max-width: 607.30px;
+    text-align: justify;
+    
+  }
+  .paraSize{
+    font-size:1rem !important;
+    line-height: 28px !important;
+    margin-bottom: 28px !important;
+  }
+}
 .how-TO-maincontainer{
   display: flex;
   align-items: center;
@@ -35,6 +85,10 @@
 }
 
 @media (max-width: 969px) {
+  .main-container-job-section {
+    padding: 0px 1.25rem;
+  }
+
   .custom-heading-min-969 {
     display: none;
   }
@@ -68,8 +122,14 @@
     margin-left: 0px;
   }
   .paraSize{
-    font-size: 12px !important;
-    line-height: 20px !important;
-    margin-bottom: 20px !important;
+    font-size:0.75rem !important;
+    line-height: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .header-titles{
+    font-size: 7.89px !important;
+    line-height: 20.7px !important;
+    font-weight: 700;
   }
 }
