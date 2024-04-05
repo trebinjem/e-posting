@@ -13,7 +13,6 @@ import Terms from '../pages/Terms-Use/Terms';
 import Unsubscribe from '../pages/Unsubscribe/Unsubscribe';
 import Faq from '../pages/FAQ/Faq';
 import OurStory from '../pages/OurStory/OurStory';
-import Animations from '../pages/Animations/Animations';
 
 export const publicRoutes = [
 	{ path: '/', element: <LandingPage /> },
@@ -24,7 +23,6 @@ export const publicRoutes = [
 	{ path: '/boy', element: <BoyAnimation /> },
 	{ path: '/job-marketplace', element: <JobMarketPlace /> },
 	{ path: '/personas', element: <Personas /> },
-	{ path: '/animations', element: <Animations /> },
 
 	// add new pages here
 	{ path: '/resources-marketplace', element: <ResourcesMarketplace /> },
