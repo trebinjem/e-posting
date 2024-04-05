@@ -1,24 +1,24 @@
-import { LandingPageWrapper } from "../Personas/Personas.style";
-import Footer from "../ResourceMarketPlace/Footer";
-import Approach from "./Approach";
-import JobSection from "./JobSection";
+import { LandingPageWrapper } from '../Personas/Personas.style';
+import Footer from '../ResourceMarketPlace/Footer';
+import Approach from './Approach';
+import JobSection from './JobSection';
 // import NavBar from "../ResourceMarketPlace/NavBar";
-import SliderSection from "./SliderSection";
+import SliderSection from './SliderSection';
 
 const HowTo = () => {
-  return (
-    <>
-      <LandingPageWrapper>
-        <SliderSection />
+	return (
+		<>
+			<LandingPageWrapper>
+				<SliderSection />
 
-        <Approach />
+				<Approach />
 
-        <JobSection />
+				<JobSection />
 
-        <Footer />
-      </LandingPageWrapper>
-    </>
-  );
+				<Footer />
+			</LandingPageWrapper>
+		</>
+	);
 };
 
 export default HowTo;
